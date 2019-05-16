@@ -1,0 +1,94 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Suppress known and/or annoying messages
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+suppress_message {PSYN-040 PSYN-088 PSYN-058 PSYN-039 PSYN-024 RCEX-060 PSYN-087 PSYN-850 TFCHK-055}
+
+# Suppress warnings about metal layer pitch that occurs during create_mw_lib:
+suppress_message {TFCHK-049 TFCHK-050}
+
+# Suppress warning that "43 logical cells do not have P/G pins" from check_mv_design -power_nets:
+suppress_message {MV-597}
+
+# Suppress warning about ignored DEF syntax and "Information" about "preferred wire track direction
+#  not being set" during read_def:
+suppress_message {DDEFR-054 MWDEFR-159}
+
+# Suppress warning about "skipping AHFS on don't touch high-fanout nets" during place_opt:
+suppress_message {PSYN-1002}
+
+# Suppress warnings about "Ignore pin on layer 0", "Ignore top cell pins with no ports", 
+# and "METAL pitch too small" during route_zrt_global -congestion_map_only true:
+suppress_message {ZRT-026 ZRT-027 ZRT-030}
+
+# Suppress warning about "P/G ports being on non-routing layer "UNKNOWN" " and warning about
+# using Elmore instead of "clock_arnoldi" delay calculation model during clock_opt:
+suppress_message {MWLIBP-311 CTS-352}
+
+# Suppress warning about "not enough nets being routed" during route_opt:
+suppress_message {RCEX-047}
+
+# Suppress warning: Power connection/checking is skipped for 2666 power pins because the required power pin information cannot be found in logical libraries. 
+suppress_message {MV-510}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Load useful "functions" or procedures, like "view"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+source ../ref/tools/procs.tcl
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# General useful settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Disable more-like page mode
+set_app_var enable_page_mode false
+# Don't want to see CMD-041 when creating new variables
+set_app_var sh_new_variable_message false
+# Increase history buffer from 20 commands to 100
+history keep 100
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Enable logging of commands and everything by date/shell
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set timestamp [clock format [clock scan now] -format "%Y-%m-%d_%H-%M"]
+set sh_output_log_file "${synopsys_program_name}.log.[pid].$timestamp"
+set sh_command_log_file "${synopsys_program_name}.cmd.[pid].$timestamp"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Aliases
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+alias v view
+alias rt  "report_timing -nosplit"
+alias rtm "report_timing -nosplit -delay min"
+alias rc  "report_constraint -all_violators -nosplit"
+alias rq report_qor
+alias h history
+alias _ measure_time
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Logic Library settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+lappend search_path ../ref/db ../ref/tlup
+set_app_var target_library "sc_max.db"
+set_app_var link_library "* sc_max.db io_max.db ram16x128_max.db"
+set_min_library sc_max.db -min_version sc_min.db
+set_min_library io_max.db -min_version io_min.db
+set_min_library ram16x128_max.db -min_version ram16x128_min.db
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# RISC_CHIP setup variables
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set my_mw_lib risc_chip.mw
+set mw_path "../ref/mw_lib"
+set tech_file " ../ref/tech/cb13_6m.tf"
+set tlup_map "../ref/tlup/cb13_6m.map"
+set tlup_max "../ref/tlup/cb13_6m_max.tluplus"
+set tlup_min "../ref/tlup/cb13_6m_min.tluplus"
+set top_design   "RISC_CHIP"
+set verilog_file "./design_data/RISC_CHIP.v"
+set sdc_file     "./design_data/RISC_CHIP.sdc"
+set def_file     "./design_data/RISC_CHIP.def"
+set ctrl_file    "./scripts/opt_ctrl.tcl"
+set derive_pg_file    "./scripts/derive_pg.tcl"

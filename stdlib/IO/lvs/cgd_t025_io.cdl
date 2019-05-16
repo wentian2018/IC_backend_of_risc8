@@ -1,0 +1,243 @@
+* SPICE netlist
+
+*.BIPOLAR
+*.RESI = 0 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.LDD
+*.SCALE METER
+*.MEGA
+.PARAM
+
+.SUBCKT _PBCD8R_down_inv3 PB_down PB_down_inv3 SUB VDD VSS
+*.PININFO PB_down:I PB_down_inv3:O SUB:B VDD:B VSS:B
+XM49 net0676 PB_down VDD VDD VSS SUB pch_5_egl1_iso_lvs A=1.9u B=1u DWsd=0 
++ wlvs=3.17828u llvs=810.564n vcpg=180.47a
+XM10 net0390 net0676 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=1u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.91706u llvs=530.175n vcpg=40.3389a
+XM12 PB_down_inv3 net0390 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=2.1u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=200.0n NF=4 DWPoly=0 DWsds=65.000n 
++ DWsdi=40.00n wlvs=28.4682u llvs=520.847n vcpg=161.355a
+XM65 net0676 PB_down VSS VSS VDD SUB nch_5_egl1_iso_lvs A=1.8u B=1u DWsd=0 
++ wlvs=3.02828u llvs=811.087n vcpg=175.131a
+XM11 PB_down_inv3 net0390 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=1.8u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=6.51706u llvs=522.766n vcpg=40.3389a
+XM1 net0390 net0676 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=2u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=6.91706u 
++ llvs=521.45n vcpg=40.3389a
+.ENDS
+
+.SUBCKT _PB_PI C FP PAD PI_switch_A SUB VDD VSS
+*.PININFO FP:I PI_switch_A:I C:O PAD:B SUB:B VDD:B VSS:B
+XM66 net0449 net036 VSS VSS VDD SUB nch_5_egl1_iso_lvs A=1.5u B=1u DWsd=0 
++ wlvs=2.57828u llvs=813.023n vcpg=159.113a
+XM83 net0445 net0449 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=2.9u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=17.4341u llvs=517.021n vcpg=80.6777a
+XM4 C net0445 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=7.7u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 wlvs=36.6341u 
++ llvs=508.1n vcpg=80.6777a
+XM82 net0449 net036 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=7.8u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=18.5171u llvs=508.013n vcpg=40.3389a
+XM76 net035 PAD VDD VDD VSS SUB pch_5_egl4_iso_lvs A=2u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=6.91706u 
++ llvs=521.45n vcpg=40.3389a
+XM75 PAD FP VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM5 net036 PAD net035 VDD VSS SUB pch_5_egl4_iso_lvs A=2u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=6.91706u 
++ llvs=521.45n vcpg=40.3389a
+XM6 net036 PI_switch_A VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM79 net0445 net0449 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=3.8u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=10.5171u llvs=514.108n vcpg=40.3389a
+XM2 C net0445 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=5.3u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=13.5171u 
++ llvs=510.976n vcpg=40.3389a
+XM1 net0471 PAD VSS VSS VDD SUB nch_5_egl4_iso_lvs A=1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.91706u 
++ llvs=530.175n vcpg=40.3389a
+XM62 net036 PI_switch_A net0471 VSS VDD SUB nch_5_egl4_iso_lvs A=1u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.91706u llvs=530.175n vcpg=40.3389a
+.ENDS
+
+.SUBCKT _PBCD8R_up_inv2 PB_up PB_up_inv2 SUB VDD VSS
+*.PININFO PB_up:I PB_up_inv2:O SUB:B VDD:B VSS:B
+XM17 net012 PB_up VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM30 PB_up_inv2 net012 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=10.9u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=24.7171u llvs=506.003n vcpg=40.3389a
+XM14 net012 PB_up VDD VDD VSS SUB pch_5_egl4_iso_lvs A=1.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=5.11706u 
++ llvs=528.995n vcpg=40.3389a
+XM29 PB_up_inv2 net012 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=2u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=13.8341u llvs=521.45n vcpg=80.6777a
+.ENDS
+
+.SUBCKT _PB_down_nor FP I OEN PB_down SUB VDD VSS
+*.PININFO FP:I I:I OEN:I PB_down:O SUB:B VDD:B VSS:B
+XM55 net030 I VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM54 IB2 OEN net030 VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM53 PB_down IB2 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=2u B=740.00n D=100.0n 
++ H=500.0n Hat=210.00n Hab=200.0n NF=1 DWPoly=0 DWsds=30.00n DWsdi=60.00n 
++ wlvs=4.72677u llvs=70.0017n vcpg=20.0493a
+XM9 PB_down FP VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM52 IB2 I VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM51 PB_down IB2 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM34 IB2 OEN VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+.ENDS
+
+.SUBCKT _PB_ESD8 PAD PB_down_inv3 PB_up_inv2 SUB VDD VSS
+*.PININFO PB_down_inv3:I PB_up_inv2:I PAD:B SUB:B VDD:B VSS:B
+XM40 PAD VDD VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=36.1171u 
++ llvs=504.108n vcpg=40.3389a
+XM38 PAD VDD VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=36.1171u 
++ llvs=504.108n vcpg=40.3389a
+XM43 PAD PB_up_inv2 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=36.1171u llvs=504.108n vcpg=40.3389a
+XM46 PAD PB_up_inv2 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=36.1171u llvs=504.108n vcpg=40.3389a
+XM45 PAD PB_up_inv2 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=36.1171u llvs=504.108n vcpg=40.3389a
+XM39 PAD VDD VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=36.1171u 
++ llvs=504.108n vcpg=40.3389a
+XM42 PAD PB_up_inv2 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=36.1171u llvs=504.108n vcpg=40.3389a
+XM41 PAD PB_up_inv2 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=36.1171u llvs=504.108n vcpg=40.3389a
+XM90 PAD VDD VDD VDD VSS SUB pch_5_egl4_iso_lvs A=16.6u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=36.1171u 
++ llvs=504.108n vcpg=40.3389a
+XM60 net057 VDD VSS VSS VDD SUB nch_5_egl4_iso_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM50 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM48 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM47 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM37 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM35 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM44 PAD PB_down_inv3 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=37.9171u llvs=503.913n vcpg=40.3389a
+XM34 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM53 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM36 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM30 PAD PB_down_inv3 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=37.9171u llvs=503.913n vcpg=40.3389a
+XM31 PAD PB_down_inv3 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=37.9171u llvs=503.913n vcpg=40.3389a
+XM32 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM33 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM52 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM49 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+XM51 PAD net057 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=17.5u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=37.9171u 
++ llvs=503.913n vcpg=40.3389a
+.ENDS
+
+.SUBCKT _PB_up_nand FP I OEN PB_up SUB VDD VSS
+*.PININFO FP:I I:I OEN:I PB_up:O SUB:B VDD:B VSS:B
+XM27 IB1 I VDD VDD VSS SUB pch_5_egl4_iso_lvs A=1.5u B=740.00n D=100.0n 
++ H=500.0n Hat=210.00n Hab=200.0n NF=1 DWPoly=0 DWsds=30.00n DWsdi=60.00n 
++ wlvs=3.72677u llvs=70.0021n vcpg=20.0493a
+XM72 net0291 OEN VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM25 net025 IB1 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM26 IB1 net0291 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM18 PB_up FP VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM1 PB_up net025 VDD VDD VSS SUB pch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM23 IB1 net0291 net348 VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM24 net348 I VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM71 net0291 OEN VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM22 net025 IB1 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+XM0 PB_up net025 VSS VSS VDD SUB nch_5_egl4_iso_lvs A=740.00n B=740.00n 
++ D=100.0n H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 
++ wlvs=4.39706u llvs=533.743n vcpg=40.3389a
+.ENDS
+
+.SUBCKT PB8 C I IE OEN PAD PG VDD VSS
+*.PININFO I:I IE:I OEN:I PG:I C:O PAD:B VDD:B VSS:B
+XI16 net027 net13 VSS VDD VSS / _PBCD8R_down_inv3
+XI20 C PG PAD IE VSS VDD VSS / _PB_PI
+XI17 net028 net14 VSS VDD VSS / _PBCD8R_up_inv2
+XI15 PG I OEN net027 VSS VDD VSS / _PB_down_nor
+XI18 PAD net13 net14 VSS VDD VSS / _PB_ESD8
+XI14 PG I OEN net028 VSS VDD VSS / _PB_up_nand
+.ENDS
+

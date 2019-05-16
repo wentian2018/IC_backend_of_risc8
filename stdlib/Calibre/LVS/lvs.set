@@ -1,0 +1,22 @@
+*lvsRulesFile: /home/zhoujy/EGL_PDK/EGL_SMIC65/output/calibre/lvs/smic65_egl_lvs_rule.lvs
+*lvsRunDir: /home/zhoujy/EGL_PDK/EGL_SMIC65/output/cds/LVS
+*lvsLayoutPaths: test_n12_egl4.calibre.db
+*lvsLayoutPrimary: test_n12_egl4
+*lvsLayoutLibrary: test_smic65egl
+*lvsLayoutView: layout
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: test_n12_egl4.src.net ../../models/lvs/smic65_egl_ckt_lvs.sp
+*lvsSourcePrimary: test_n12_egl4
+*lvsSourceLibrary: test_smic65egl
+*lvsSourceGetFromViewer: 1
+*lvsSpiceFile: test_n12_egl4.sp
+*lvsERCDatabase: test_n12_egl4.erc.results
+*lvsERCSummaryFile: test_n12_egl4.erc.summary
+*lvsReportFile: test_n12_egl4.lvs.report
+*lvsMaskDBFile: test_n12_egl4.maskdb
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: test_smic65egl
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: test_n12_egl4.def

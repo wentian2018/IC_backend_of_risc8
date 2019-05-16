@@ -1,0 +1,5 @@
+set_switching_activity -toggle_rate 0.25  -static_probability 0.5 [get_ports  pad_in[*]]
+set_switching_activity -toggle_rate 0.30  -static_probability 0.5 [get_ports  pc_be_in[*]]
+set_switching_activity -toggle_rate 0.70  -static_probability 0.5 [get_ports  sd_DQ_in[*]]
+set_switching_activity -toggle_rate 0.00  -static_probability 0.0 [get_ports "scan_en test_mode *rst_n pidsel pgnt_n pm66en"]
+set_switching_activity -toggle_rate 0.03 -static_probability 0.5 [get_ports  "ppar_in pframe_n_in ptrdy_n_in pirdy_n_in pdevsel_n_in pstop_n_in pperr_n_in pserr_n_in"]

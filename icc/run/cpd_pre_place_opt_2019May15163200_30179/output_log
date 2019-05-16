@@ -1,0 +1,326 @@
+Start CPD check: ::check_tlu_plus_files 
+
+Sanity check for TLU+ vs MW-Tech files:
+ max_tlu+: ../../ref1/tlup/cb13_6m_max.tluplus
+ min_tlu+: ../../ref1/tlup/cb13_6m_min.tluplus
+ mapping_file: ../../ref1/tlup/cb13_6m.map
+ max_emul_tlu+: **NONE**
+ min_emul_tlu+: **NONE**
+ MW design lib: risc8_icc
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+1
+End CPD check: ::check_tlu_plus_files
+Start CPD check: ::get_placement_area 
+425.565 425.565 730.195 728.145
+End CPD check: ::get_placement_area
+Start CPD check: report_routing_metal_info 
+No ignored layers specified.
+Information: Report design vs library layers and preferred routing directions. (PNR-164)
+ 
+****************************************
+Report : Layers
+Design : cpu
+Version: K-2015.06
+Date   : Wed May 15 16:32:01 2019
+****************************************
+
+Layer Name                   Library             Design              Tool understands
+METAL                        Horizontal          Horizontal          Horizontal
+METAL2                       Vertical            Vertical            Vertical
+METAL3                       Horizontal          Horizontal          Horizontal
+METAL4                       Vertical            Vertical            Vertical
+METAL5                       Horizontal          Horizontal          Horizontal
+METAL6                       Vertical            Vertical            Vertical
+
+Information: Report track info.  (PNR-165)
+****************************************
+Report track
+Design : cpu
+Version: K-2015.06
+Date   : Wed May 15 16:32:01 2019
+****************************************
+Layer          Direction     Start         Tracks    Pitch          Attr
+------------------------------------------------------------------------
+Attributes :
+         usr : User defined
+         def : DEF defined
+
+METAL              Y         0.600          2812      0.410           
+METAL2             Y         0.600          2812      0.410           
+METAL2             X         0.600          2817      0.410           
+METAL              X         0.600          2817      0.410           
+METAL3             X         0.600          2817      0.410           
+METAL3             Y         0.600          2812      0.410           
+METAL2             Y         0.600          2812      0.410           
+METAL4             Y         0.600          2812      0.410           
+METAL4             X         0.380          2243      0.515           
+METAL3             X         0.380          2243      0.515           
+METAL5             X         0.380          2243      0.515           
+METAL5             Y         0.520          1424      0.810           
+METAL4             Y         0.520          1424      0.810           
+METAL6             Y         0.520          1424      0.810           
+METAL6             X         0.910          1191      0.970           
+METAL5             X         0.910          1191      0.970           
+1
+End CPD check: report_routing_metal_info
+Start CPD check: check_track_and_unit 
+
+End CPD check: check_track_and_unit
+Start CPD check: check_layer_direction 
+
+End CPD check: check_layer_direction
+Start CPD check: check_physical_only_ports 
+Warning: No port objects matched '*' (SEL-004)
+[]
+End CPD check: check_physical_only_ports
+Start CPD check: ::check_database 
+************************************************************
+CHECK_DATABASE RESULTS FOR CELL : cpu.CEL
+************************************************************
+MWUHIER: Checking for hierarchical internal netlist and flat internal netlist consistency ... 
+MWUHIER: Done with checking hierarchical internal netlist and flat internal netlist consistency. 
+Information: MWUHIER: Number of errors = 0 (MW-348)
+End PG consistent checking.. PG_Pass
+Information: Performing CEL netlist consistency check. (MWDC-118)
+Information: CEL consistency check PASSED. (MWDC-119)
+
+Start UPF checking.
+No UPF infomation. Finish UPF checking.
+1
+End CPD check: ::check_database
+Start CPD check: report_taint -dump_errors 
+
+****************************************
+  Report : Suggestions
+  Design : cpu
+  Version: K-2015.06
+  Date   : Wed May 15 16:32:01 2019
+****************************************
+
+Information: No suggestion for current design. (PSYN-1068)
+
+1
+End CPD check: report_taint -dump_errors
+Start CPD check: check_for_HFN_dont_touch_nets 
+
+End CPD check: check_for_HFN_dont_touch_nets
+Start CPD check: check_block_abstraction -stage pre_place_opt 
+Information: No blocks with abstraction information found
+1
+End CPD check: check_block_abstraction -stage pre_place_opt
+Start CPD check: check_placement_utilization_violation 
+ 
+****************************************
+  Report : Chip Summary
+  Design : cpu
+  Version: K-2015.06
+  Date   : Wed May 15 16:32:01 2019
+****************************************
+Std cell utilization: 55.43%  (33771/(60926-0))
+(Non-fixed + Fixed)
+Std cell utilization: 55.43%  (33771/(60926-0))
+(Non-fixed only)
+Chip area:            60926    sites, bbox (425.56 425.56 730.20 728.14) um
+Std cell area:        33771    sites, (non-fixed:33771  fixed:0)
+                      2927     cells, (non-fixed:2927   fixed:0)
+Macro cell area:      0        sites
+                      0        cells
+Placement blockages:  0        sites, (excluding fixed std cells)
+                      0        sites, (include fixed std cells & chimney area)
+                      0        sites, (complete p/g net blockages)
+Routing blockages:    0        sites, (partial p/g net blockages)
+                      0        sites, (routing blockages and signal pre-route)
+Lib cell count:       66 
+Avg. std cell width:  3.96 um 
+Site array:           unit     (width: 0.41 um, height: 3.69 um, rows: 82)
+Physical DB scale:    1000 db_unit = 1 um 
+
+ 
+****************************************
+  Report : pnet options
+  Design : cpu
+  Version: K-2015.06
+  Date   : Wed May 15 16:32:01 2019
+****************************************
+
+
+--------------------------------------------------------------------
+Layer      Blockage   Min_width   Min_height   Via_additive     Density
+--------------------------------------------------------------------
+METAL      none          ---         ---       via additive      ---
+METAL2     none          ---         ---       via additive      ---
+METAL3     none          ---         ---       via additive      ---
+METAL4     none          ---         ---       via additive      ---
+METAL5     none          ---         ---       via additive      ---
+METAL6     none          ---         ---       via additive      ---
+
+**********************************
+      Sub-Region Utilization      
+**********************************
+Number of regions with placement utilization 0 - 0.125 is 0 (0.00%)
+Number of regions with placement utilization 0.125 - 0.25 is 0 (0.00%)
+Number of regions with placement utilization 0.25 - 0.375 is 0 (0.00%)
+Number of regions with placement utilization 0.375 - 0.5 is 50 (17.30%)
+Number of regions with placement utilization 0.5 - 0.625 is 205 (70.93%)
+Number of regions with placement utilization 0.625 - 0.75 is 34 (11.76%)
+Number of regions with placement utilization 0.75 - 0.875 is 0 (0.00%)
+Number of regions with placement utilization 0.875 - 1 is 0 (0.00%)
+1
+
+1
+End CPD check: check_placement_utilization_violation
+Start CPD check: cpd_check_tie_connection 
+0
+End CPD check: cpd_check_tie_connection
+Start CPD check: cpd_check_cells_restrictions 
+0
+End CPD check: cpd_check_cells_restrictions
+Start CPD check: check_bound_utilization 
+Checking Bounds Utilization:
+Warning: Nothing implicitly matched '*' (SEL-003)
+0
+End CPD check: check_bound_utilization
+Start CPD check: check_bounds 
+Warning: Nothing implicitly matched '*' (SEL-003)
+
+End CPD check: check_bounds
+Start CPD check: cpd_check_bounds_overlap 
+
+End CPD check: cpd_check_bounds_overlap
+Start CPD check: check_va_utilization 
+Checking Voltage Area Utilization:
+Warning: No voltage_area objects matched '*' (SEL-004)
+
+End CPD check: check_va_utilization
+Start CPD check: placement_check 
+
+Warning: IO pad 'pc3d10' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'pc3d00' is unusable: unknown logic function.  (OPT-1022)
+  Loading design 'cpu'
+
+
+
+
+
+  Total moveable cell area: 51092.1
+  Total fixed cell area: 0.0
+  Total physical cell area: 51092.1
+  Core area: (425565 425565 730195 728145)
+false
+End CPD check: placement_check
+Start CPD check: report_fp_placement 
+Reference Point: Lower Left-hand corner of Core Base Array
+Number of plan group pins = 0
+  2 blocks freed
+  0 bytes freed
+*********************************************
+Report     : Virtual Flat Placement
+Design     : cpu
+Version    : K-2015.06
+Date       : Wed May 15 16:32:03 2019
+*********************************************
+
+Total wirelength: 171130.45
+Number of 100x100 tracks cell density regions: 49
+Number of low (< 10%) cell density regions: 0 (0.000%)
+Number of high (> 200%) cell density regions: 0 (0.000%)
+Maximum cell density: 58.56% (at 692 576 730 614)
+Checking hard macro to hard macro overlaps...
+Number of hard macro to hard macro overlaps: 0
+Checking hard macro to std cell overlaps...
+Number of hard macro to std cell overlaps: 0
+Checking plan group to plan group overlaps...
+Number of plan group to plan group overlaps: 0
+Number of TL cells overlapping PG: 0
+Number of cells violating core area: 0
+Total number of cells violating plan group or core area: 0
+1
+End CPD check: report_fp_placement
+Start CPD check: ::check_physical_constraints 
+
+  Loading design 'cpu'
+
+
+Total Physical Cells: 20 Fixed: 0 Not fixed :20
+
+Total Area : 809402.75 Fixed Area: 0.00 Unfixed Area:809402.75
+
+ Physical Library: /home/zhouwt/risc8/icc/run/risc8_icc
+
+ Routing layer : METAL    width: 160    pitch: 410   space: 180
+
+ Routing Layer : METAL Resistance : 6.4e-05 Capacitance : 4.22e-05
+
+ Routing layer : METAL2    width: 200    pitch: 410   space: 210
+
+ Routing Layer : METAL2 Resistance : 3.7e-05 Capacitance : 2.25e-05
+
+ Routing layer : METAL3    width: 200    pitch: 410   space: 210
+
+ Routing Layer : METAL3 Resistance : 3.7e-05 Capacitance : 1.41e-05
+
+ Routing layer : METAL4    width: 200    pitch: 515   space: 210
+
+ Routing Layer : METAL4 Resistance : 3.7e-05 Capacitance : 1.01e-05
+
+ Routing layer : METAL5    width: 400    pitch: 810   space: 400
+
+ Routing Layer : METAL5 Resistance : 3.7e-05 Capacitance : 5.9e-06
+
+ Routing layer : METAL6    width: 440    pitch: 970   space: 460
+
+ Routing Layer : METAL6 Resistance : 1.9e-05 Capacitance : 6.6e-06
+
+Warning: Capacitance of layer METAL varies more than the specified factor (5.00) from layer METAL5. (PSYN-261)
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/ram16x128
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/io
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/ram4x32
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/ram8x64
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/special
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/sc
+
+ Physical Library: /home/zhouwt/risc8/ref1/mw_lib/ram32x64
+
+
+Total Bounds:0 Group Bounds:0 Move Bounds:0
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 6 routable metal layers
+    This is considered as a 6-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 82 horizontal rows
+    60 pre-routes for placement blockage/checking
+    143 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+
+The maximum cell width in library is 12.710 um (e.g. 31 sites)
+
+There are no narrow placement areas less than 31 sites
+1
+End CPD check: ::check_physical_constraints

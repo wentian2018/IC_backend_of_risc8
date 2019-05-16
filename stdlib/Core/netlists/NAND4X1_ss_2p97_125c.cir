@@ -1,0 +1,59 @@
+* File: rcx_out.net
+* Created: Tue Mar 26 09:46:33 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* 
+* 
+* .include "rcx_out.net.pex"
+* BEGIN of "./rcx_out.net.pex"
+* File: rcx_out.net.pex
+* Created: Tue Mar 26 09:46:33 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* Nominal Temperature: 27C
+* Circuit Temperature: 27C
+* 
+
+* END of "./rcx_out.net.pex"
+* 
+.subckt NAND4X1  A B C D VDD VSS Y
+* 
+XM10/X1 net22 D VSS VSS nch_5_mac_egl4 A=4.8e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=2.49941e-07 HAB=6.59956e-07 AS=3.532e-12 PS=1.08457e-05
++ AD=1.16173e-11 PD=3.37488e-05
+XM8/X1 net23 B net24 VSS nch_5_mac_egl4 A=4.8e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=2.49941e-07 HAB=6.59956e-07 AS=3.532e-12 PS=1.08457e-05
++ AD=1.16173e-11 PD=3.37488e-05
+XM2/X1 Y A net23 VSS nch_5_mac_egl4 A=4.8e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=2.49941e-07 HAB=6.59956e-07 AS=3.532e-12 PS=1.08457e-05
++ AD=1.16173e-11 PD=3.37488e-05
+XM9/X1 net24 C net22 VSS nch_5_mac_egl4 A=4.8e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=2.49941e-07 HAB=6.59956e-07 AS=3.532e-12 PS=1.08457e-05
++ AD=1.16173e-11 PD=3.37488e-05
+XM7/X1 Y D VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=7.3493e-12 PD=2.25488e-05
+XM0/X1 Y B VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=7.3493e-12 PD=2.25488e-05
+XM3/X1 Y A VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=7.3493e-12 PD=2.25488e-05
+XM4/X1 Y C VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=7.3493e-12 PD=2.25488e-05
+*
+* 
+* .include "rcx_out.net.NAND4X1.pxi"
+* BEGIN of "./rcx_out.net.NAND4X1.pxi"
+* File: rcx_out.net.NAND4X1.pxi
+* Created: Tue Mar 26 09:46:33 2019
+* 
+
+* END of "./rcx_out.net.NAND4X1.pxi"
+* 
+*
+.ends
+*
+*
+

@@ -1,0 +1,150 @@
+#!/bin/sh 
+# \
+exec wish "$0" "$@"
+
+#
+# Or change to this: #!/usr/local/bin/wish8.0
+#
+
+# 2007.10.11 amins
+# Added tagging/search functionality
+# The search dialog uses regular expressions as input
+# You can also select text, then tag all text that matches the selection
+#
+# 2003.10.20
+# Added save_as functionality
+# Font selection made more general
+# Better handling of temporary files
+
+
+set myfont(cr)   {-*-screen-medium-*-*-*-12-*-*-*-*-*-*-*}
+set myfont(bf)   {-*-application-bold-*-*-*-12-*-*-*-*-*-*-*}
+#set myfont(cr)   {-adobe-courier-medium-r-normal--12-120-75-75-p-67-iso8859-1}
+#set myfont(bf)   {-adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1}
+
+set tmpfile [lindex $argv 0]
+set command [lindex $argv 1]
+
+
+# Procedure to save the displayed content:
+# content: list, where every list element is going to be saved as one line
+proc save_as {content} {
+
+    #   Type names		Extension(s)
+    #
+    #---------------------------------------------------------
+    set types {
+	{"Text files"		{.txt .doc}	}
+	{"All files"		*}
+    }
+    set file [tk_getSaveFile -filetypes $types -parent . \
+		  -initialfile Untitled]
+
+    if {$file != ""} {
+	# Save contents to a file:
+	set FILE [open $file w]
+	foreach line $content {
+	    puts $FILE $line
+	}
+	close $FILE;
+	#puts "\nview.tk Window content saved as $file\n"
+    }
+}
+
+proc TagSelection {} {
+    set a ""
+    catch {set a [selection get]}
+    if {$a != ""} { TagAll $a }
+}
+
+proc TagAll {searchtext} {
+    set found 0
+    scan [.text index end] %d nl
+    # Search the text line by line
+    for {set i 1} {$i < $nl} {incr i} {
+	set pos $i.0
+	set lastpos [.text index $i.end]
+
+	# Scan the entire line until the end
+	while {$pos < $lastpos} {
+	    set pos [.text search -forwards -count match_len -regexp $searchtext $pos $i.end]
+	    if {$pos != ""} {
+		if {$found == 0} {
+		    set found 1
+		    .text see $pos
+		}
+		scan $pos "%d.%d" line char
+		set endpos $i.[expr $char + $match_len]
+		set match [.text get $pos $endpos]
+		.text tag add $match $pos $endpos
+		.text tag configure $match -background yellow
+		set pos $endpos
+	    } else {
+		break
+	    }
+	}
+    }
+    
+    if {$found == 0} {
+	tk_messageBox -parent . -type ok -message "The pattern \"$searchtext\" was not found."
+    }
+}
+
+proc DelAllTags {} {
+    foreach tag [.text tag names] {
+	.text tag remove $tag 1.0 end
+    }
+}
+
+proc FindPopup {} {
+    
+    global myfont
+    
+    toplevel .fpop -width 10c -height 4c
+#    grab .fpop
+    wm title .fpop "Find Text"
+
+    label .fpop.label -font $myfont(bf) -text "RegExp Search:  "
+    entry .fpop.entry -width 20 -bd 1 -textvariable searchtext
+    
+#    button .fpop.search -text "Search" -command {Search} -font $myfont(bf) -relief groove -bd 1
+    button .fpop.tagall -text "Tag" -command {TagAll $searchtext} -font $myfont(bf) -relief groove -bd 1
+    button .fpop.deltags -font $myfont(bf) -relief groove -text "Remove Tags" -command "DelAllTags" -bd 1
+    button .fpop.dismiss -fg red -text Dismiss -command {destroy .fpop} -font $myfont(bf) -relief groove -bd 1
+    
+    pack .fpop.label .fpop.entry .fpop.tagall .fpop.deltags .fpop.dismiss -side left -padx 5 -pady 10
+    
+    focus .fpop.entry
+}
+
+
+# Build the interface
+wm title . "$command"
+tk_setPalette grey85
+
+frame .buttons 
+pack .buttons -side bottom -pady 1m
+
+button .buttons.dismiss -fg red -font $myfont(bf) -relief groove -text "Close Window" -command "exit" -bd 1
+button .buttons.search -fg blue -font $myfont(bf) -relief groove -text "RE Search..." -command "FindPopup" -bd 1
+button .buttons.tagsel -fg blue -font $myfont(bf) -relief groove -text "Tag Selection" -command "TagSelection" -bd 1
+button .buttons.deltags -fg blue -font $myfont(bf) -relief groove -text "Remove Tags" -command "DelAllTags" -bd 1
+button .buttons.saveas -font $myfont(bf) -relief groove -text "Save As..." -command {save_as $content} -bd 1
+pack .buttons.dismiss .buttons.search .buttons.tagsel .buttons.deltags .buttons.saveas -fill x -side left -expand yes -padx 5
+
+text .text -font $myfont(cr) -relief sunken -bd 1 -bg grey80 -yscrollcommand ".scroll set" \
+      -setgrid 1 -height 45
+scrollbar .scroll -command ".text yview" -bd 1
+pack .scroll -side right -fill y
+pack .text -expand yes -fill both -padx 3
+
+set TMP [open $tmpfile r]
+while {[gets $TMP line] >= 0} {
+    .text insert end $line\n
+    lappend content $line
+}
+
+
+# done with the temporary file - close and delete
+close $TMP
+file delete $tmpfile

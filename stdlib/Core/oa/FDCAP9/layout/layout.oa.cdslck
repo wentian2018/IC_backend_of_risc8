@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      shencq
+HostName                       helium3.sz.cgd.li
+ProcessIdentifier              16780
+ProcessCreationTime_UTC        1553564020
+ProcessCreationTime_Readable   Tue Mar 26 09:33:40 2019 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/shencq/stdlib_egl/cds/cell_lib/FDCAP9/layout/layout.oa.cdslck
+TimeEditLocked                 Tue Mar 26 09:35:26 2019 CST

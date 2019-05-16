@@ -1,0 +1,42 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : cpu
+Version: K-2015.06
+Date   : Thu May 16 13:04:11 2019
+****************************************
+
+
+Library(s) Used:
+
+    cb13fs120_tsmc_max (File: /home/zhouwt/risc8/ref1/db/sc_max.db)
+
+
+Operating Conditions: cb13io320_tsmc_max   Library: cb13io320_tsmc_max
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+cpu                                       0.259    0.244 3.87e+07    0.542 100.0
+  idec (idec)                          1.39e-02 4.10e-02 9.49e+05 5.59e-02  10.3
+  alu (alu)                            2.56e-02 5.08e-02 1.98e+06 7.84e-02  14.5
+  regs (regs)                          3.55e-02 2.27e-02 2.63e+07 8.45e-02  15.6
+    dram (dram)                        3.44e-02 2.16e-02 2.62e+07 8.22e-02  15.2
+1

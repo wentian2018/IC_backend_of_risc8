@@ -1,0 +1,30 @@
+
+conducting_layers
+  M1                   M1                  
+  M2                   M2                  
+  M3                   M3                  
+  M4                   M4                  
+  M5                   M5                  
+  M6                   M6                  
+  M7                   M7                  
+  M8                   M8                  
+  TM2                  TM2                 
+  RDL                  RDL                 
+
+via_layers
+  V1                   V1                  
+  V2                   V2                  
+  V3                   V3                  
+  V4                   V4                  
+  V5                   V5                  
+  V6                   V6                  
+  V7                   V7                  
+  TV2                  TV2                 
+  RDV                  RDV                 
+
+marker_layers
+
+remove_layers
+  GT
+  CT
+

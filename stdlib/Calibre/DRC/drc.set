@@ -1,0 +1,18 @@
+*drcRulesFile: /home/PDK/SMIC65/smic55ll_ulp_rf_09121825_1P7M_6Ic_1MTTc_ALPA2_oa_cds_2016_12_09_v1.16_0/Calibre/DRC/SMIC_CalDRC_55LLULPGE_091012182533_V1.12_0.drc
+*drcRunDir: /home/zhoujy/EGL_PDK/EGL_SMIC65/output/cds/DRC
+*drcLayoutPaths: test_n12_egl4.calibre.db
+*drcLayoutPrimary: test_n12_egl4
+*drcLayoutLibrary: test_smic65egl
+*drcLayoutView: layout
+*drcLayoutGetFromViewer: 1
+*drcResultsFile: test_n12_egl4.drc.results
+*drcSummaryFile: test_n12_egl4.drc.summary
+*drcIncrDRCSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*drcIncrDRCLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*drcIncrDRCGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: test_smic65egl
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: test_n12_egl4.def

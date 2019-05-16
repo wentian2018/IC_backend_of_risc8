@@ -1,0 +1,1324 @@
+* SPICE netlist
+
+*.BIPOLAR
+*.RESI = 0 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.LDD
+*.SCALE METER
+*.MEGA
+.PARAM
+
+.SUBCKT INVX1 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM1 Y A VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM0 Y A VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+.ENDS
+
+.SUBCKT AND2X2 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM6 Y net08 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM2 net08 A net7 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net7 B VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM4 Y net08 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM3 net08 A VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM0 net08 B VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+.ENDS
+
+.SUBCKT AOI21X1 A0 A1 B0 VDD VSS Y
+*.PININFO A0:I A1:I B0:I Y:O VDD:B VSS:B
+XM8 Y B0 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM2 Y A0 net7 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net7 A1 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM11 Y B0 net07 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM3 net07 A0 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM0 net07 A1 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT DFFDRX1 CK D Q QN RN VDD VSS
+*.PININFO CK:I D:I RN:I Q:O QN:O VDD:B VSS:B
+XM76 net0122 D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM4 MA MD net089 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM56 MD ck2n net0116 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM52 net0138 R VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM50 MC MB net0138 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM48 net0119 MA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM49 MB ck1n net0119 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM58 SA SD net0132 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM72 SB ck1n net0112 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM65 SD ck2p net0129 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM64 net0129 SC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM69 QN SC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM66 QN SA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM63 net0130 R VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM68 Q SD VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM67 Q SB VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM60 net0131 SA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM59 net0132 R VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM62 SC SB net0130 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM71 SD ck2n net0110 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM70 net0110 MC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM61 SB ck1p net0131 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM73 net0112 MA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM75 MD ck2p net0120 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM9 net089 R VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM74 net0120 D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM54 net0116 MC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM77 MB ck1p net0122 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM5 MA R VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM57 QN SA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM55 Q SB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM53 QN SC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM51 Q SD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM44 SB ck1n net0135 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM45 SD ck2n net0133 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM42 SA R VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM16 MC R VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM39 SA SB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM33 net0133 SA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM32 net0135 SC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM38 SC SD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM36 SC R VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM30 SD ck2p net0111 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM29 net0111 MC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM26 net0113 MA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM22 MD ck2p net0117 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM21 net0117 MA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM8 MC MD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM23 SB ck1p net0113 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM14 MB ck1p net0118 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM13 net0118 MC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM10 MA MB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM7 MD ck2n net0121 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM6 net0121 D VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM3 net4 D VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM0 MB ck1n net4 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XI4 RN VDD VSS R / INVX1
+XI3 CK VDD VSS ck2n / INVX1
+XI1 ck2n VDD VSS ck2p / INVX1
+XI0 ck1n VDD VSS ck1p / INVX1
+XI2 CK VDD VSS ck1n / INVX1
+.ENDS
+
+.SUBCKT DFFDX1 CK D Q QN VDD VSS
+*.PININFO CK:I D:I Q:O QN:O VDD:B VSS:B
+XM57 Q SA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM55 QN SB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM53 Q SC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM51 QN SD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM49 ck1n CK VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM47 ck1p ck1n VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM45 ck2n CK VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM43 ck2p ck2n VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM42 SD ck2n net0109 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM41 net0109 SA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM37 SC SD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM36 SB ck1n net0115 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM35 net0115 SC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM33 SA SB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM30 SD ck2p net0111 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM29 net0111 MD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM26 net0113 MB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM22 MD ck2p net0117 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM21 net0117 MA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM16 MC MD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM23 SB ck1p net0113 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM14 MB ck1p net0118 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM13 net0118 MC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM10 MA MB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM7 MD ck2n net0121 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM6 net0121 D VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM3 net4 D VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM0 MB ck1n net4 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM59 net0120 D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM58 Q SA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM56 QN SB VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM54 Q SC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM52 QN SD VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM50 ck1n CK VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM48 ck1p ck1n VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM46 ck2n CK VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM44 ck2p ck2n VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM40 net0108 SC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM39 SD ck2p net0108 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM38 SC SB VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM34 net0114 SA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM32 SA SD VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM31 SB ck1p net0114 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM28 net0110 MD VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM27 SD ck2n net0110 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM25 net0112 MB VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM20 net0116 MC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM19 MD ck2n net0116 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM24 SB ck1n net0112 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM17 MC MB VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM12 net0119 MA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM9 MA MD VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM11 MB ck1n net0119 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM60 MD ck2p net0120 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM2 net0122 D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+XM1 MB ck1p net0122 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.16085u 
++ llvs=514.37n vcpg=20.0493a
+.ENDS
+
+.SUBCKT DFFNX1 CK D QN VDD VSS
+*.PININFO CK:I D:I QN:O VDD:B VSS:B
+XM18 m pm VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM21 net030 net223 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM20 net219 m VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM24 net207 net030 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM25 net223 cn net207 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM22 QN net030 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM17 c cn VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM15 cn CK VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM2 pm cn net235 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM8 net235 D VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM19 net223 c net219 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM27 net251 m VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM26 pm c net251 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM9 cn CK VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM16 c cn VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM11 m pm VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM4 net182 D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM7 net166 m VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM5 net154 net030 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 pm cn net198 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 net223 c net154 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM14 QN net030 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 pm c net182 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net198 m VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM12 net030 net223 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM10 net223 cn net166 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+.ENDS
+
+.SUBCKT DFFX1 CK D Q VDD VSS
+*.PININFO CK:I D:I Q:O VDD:B VSS:B
+XM18 m pm VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM21 net030 net223 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM20 net219 m VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM24 net207 net030 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM25 net223 cn net207 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM22 Q net223 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM17 c cn VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM15 cn CK VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM2 pm cn net235 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM8 net235 D VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM19 net223 c net219 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM27 net251 m VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM26 pm c net251 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM9 cn CK VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM16 c cn VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM11 m pm VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM4 net182 D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM7 net166 m VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM5 net154 net030 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 pm cn net198 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 net223 c net154 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM14 Q net223 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 pm c net182 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net198 m VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM12 net030 net223 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM10 net223 cn net166 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+.ENDS
+
+.SUBCKT DFFX2 CK D Q VDD VSS
+*.PININFO CK:I D:I Q:O VDD:B VSS:B
+XM18 m pm VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM21 net030 net223 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM20 net219 m VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM24 net207 net030 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM25 net223 cn net207 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM22 Q net223 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM17 c cn VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM15 cn CK VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM2 pm cn net235 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM8 net235 D VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM19 net223 c net219 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM27 net251 m VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM26 pm c net251 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+XM9 cn CK VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM16 c cn VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM11 m pm VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM4 net182 D VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM7 net166 m VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM5 net154 net030 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 pm cn net198 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 net223 c net154 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM14 Q net223 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM0 pm c net182 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM3 net198 m VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM12 net030 net223 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM10 net223 cn net166 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT DLYX0P2 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM70 VSS net13 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM58 net040 A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM10 net13 A net040 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 Y net13 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM69 VDD net13 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM55 net13 A net039 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM19 net039 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM7 Y net13 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT DLYX1 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM59 net010 net026 net087 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM62 net13 net010 net084 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM60 net087 net026 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM61 net084 net010 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM70 VSS net026 VSS VSS nch_5_mac_egl4_lvs A=3.6u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=3 DWPoly=0 DWsds=0 DWsdi=0 wlvs=30.3512u 
++ llvs=514.665n vcpg=121.017a
+XM58 net040 A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM10 net026 A net040 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 Y net13 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=4 DWPoly=0 DWsds=0 DWsdi=0 wlvs=28.4682u 
++ llvs=520.847n vcpg=161.355a
+XM72 VSS net13 VSS VSS nch_5_mac_egl4_lvs A=3.6u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=3 DWPoly=0 DWsds=0 DWsdi=0 wlvs=30.3512u 
++ llvs=514.665n vcpg=121.017a
+XM56 net010 net026 net085 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM39 net085 net026 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM69 VDD net026 VDD VDD pch_5_mac_egl4_lvs A=7.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=3 DWPoly=0 DWsds=0 DWsdi=0 wlvs=55.5512u 
++ llvs=508.013n vcpg=121.017a
+XM55 net026 A net039 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM19 net039 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM7 Y net13 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=4 DWPoly=0 DWsds=0 DWsdi=0 wlvs=50.0682u 
++ llvs=511.853n vcpg=161.355a
+XM71 VDD net13 VDD VDD pch_5_mac_egl4_lvs A=7.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=3 DWPoly=0 DWsds=0 DWsdi=0 wlvs=55.5512u 
++ llvs=508.013n vcpg=121.017a
+XM48 net083 net010 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM57 net13 net010 net083 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT FDCAP12 VDD VSS
+*.PININFO VDD:B VSS:B
+XM1 net4 net3 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM0 net3 net4 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+.ENDS
+
+.SUBCKT FDCAP24 VDD VSS
+*.PININFO VDD:B VSS:B
+XM3 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM1 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM2 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM0 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+.ENDS
+
+.SUBCKT FDCAP48 VDD VSS
+*.PININFO VDD:B VSS:B
+XM6 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM3 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM4 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM1 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM7 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM2 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM5 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM0 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+.ENDS
+
+.SUBCKT FDCAP6 VDD VSS
+*.PININFO VDD:B VSS:B
+XM1 net4 net3 VSS VSS nch_5_mac_egl1_lvs A=9u B=1u DWsd=0 wlvs=13.8283u 
++ llvs=802.428n vcpg=559.565a
+XM0 net3 net4 VDD VDD pch_5_mac_egl1_lvs A=9u B=1u DWsd=0 wlvs=13.8283u 
++ llvs=802.428n vcpg=559.565a
+.ENDS
+
+.SUBCKT FDCAP9 VDD VSS
+*.PININFO VDD:B VSS:B
+XM1 net4 net3 VSS VSS nch_5_mac_egl1_lvs A=9u B=4u DWsd=0 wlvs=13.8283u 
++ llvs=2.75495u vcpg=559.565a
+XM0 net3 net4 VDD VDD pch_5_mac_egl1_lvs A=9u B=4u DWsd=0 wlvs=13.8283u 
++ llvs=2.75495u vcpg=559.565a
+.ENDS
+
+.SUBCKT FDCAP96 VDD VSS
+*.PININFO VDD:B VSS:B
+XM11 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM10 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM9 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM8 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM6 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM3 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM4 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM1 net04 net03 VSS VSS nch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM15 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM14 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM13 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM12 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM7 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM2 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM5 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+XM0 net03 net04 VDD VDD pch_5_mac_egl1_lvs A=9u B=5.8u DWsd=0 wlvs=13.8283u 
++ llvs=3.92646u vcpg=559.565a
+.ENDS
+
+.SUBCKT INVX16 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM1 Y A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=8 DWPoly=0 DWsds=0 DWsdi=0 wlvs=56.9365u 
++ llvs=520.847n vcpg=322.711a
+XM0 Y A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=8 DWPoly=0 DWsds=0 DWsdi=0 wlvs=100.136u 
++ llvs=511.853n vcpg=322.711a
+.ENDS
+
+.SUBCKT INVX2 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM1 Y A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 Y A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT INVX4 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM1 Y A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 wlvs=14.2341u 
++ llvs=520.847n vcpg=80.6777a
+XM0 Y A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 wlvs=25.0341u 
++ llvs=511.853n vcpg=80.6777a
+.ENDS
+
+.SUBCKT INVX8 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+XM1 Y A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=4 DWPoly=0 DWsds=0 DWsdi=0 wlvs=28.4682u 
++ llvs=520.847n vcpg=161.355a
+XM0 Y A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=4 DWPoly=0 DWsds=0 DWsdi=0 wlvs=50.0682u 
++ llvs=511.853n vcpg=161.355a
+.ENDS
+
+.SUBCKT MAJ3X1 A B C VDD VSS Y
+*.PININFO A:I B:I C:I Y:O VDD:B VSS:B
+XM11 Y net29 net24 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM8 net24 net13 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM7 Y net14 net23 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net23 net29 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net26 net14 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM2 Y net13 net26 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM22 Y net14 net25 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM23 net28 net14 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM24 Y net29 net28 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM0 net25 net13 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM25 Y net13 net27 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM26 net27 net29 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XI3 C VDD VSS net29 / INVX1
+XI2 A VDD VSS net13 / INVX1
+XI0 B VDD VSS net14 / INVX1
+.ENDS
+
+.SUBCKT MUXN2X1 A B S0 VDD VSS Y
+*.PININFO A:I B:I S0:I Y:O VDD:B VSS:B
+XM9 net18 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM7 net17 B VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM5 net17 net28 Y VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net18 S0 Y VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 net28 S0 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM8 net18 A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 net17 B VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM4 net17 S0 Y VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM2 net18 net28 Y VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net28 S0 VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+.ENDS
+
+.SUBCKT NAND2X1 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM2 Y A net7 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net7 B VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 Y A VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM0 Y B VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+.ENDS
+
+.SUBCKT NAND2X2 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM2 Y A net7 VSS nch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM1 net7 B VSS VSS nch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM3 Y A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM0 Y B VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT NAND3X1 A B C VDD VSS Y
+*.PININFO A:I B:I C:I Y:O VDD:B VSS:B
+XM5 net012 C VSS VSS nch_5_mac_egl4_lvs A=3.4u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=9.71706u 
++ llvs=515.269n vcpg=40.3389a
+XM2 Y A net7 VSS nch_5_mac_egl4_lvs A=3.4u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=9.71706u 
++ llvs=515.269n vcpg=40.3389a
+XM1 net7 B net012 VSS nch_5_mac_egl4_lvs A=3.4u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=9.71706u 
++ llvs=515.269n vcpg=40.3389a
+XM4 Y C VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM3 Y A VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM0 Y B VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+.ENDS
+
+.SUBCKT NAND4X1 A B C D VDD VSS Y
+*.PININFO A:I B:I C:I D:I Y:O VDD:B VSS:B
+XM10 net22 D VSS VSS nch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM8 net23 B net24 VSS nch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM2 Y A net23 VSS nch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM9 net24 C net22 VSS nch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM7 Y D VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM0 Y B VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 Y A VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM4 Y C VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+.ENDS
+
+.SUBCKT NMAJ3X1 A B C VDD VSS Y
+*.PININFO A:I B:I C:I Y:O VDD:B VSS:B
+XM11 Y C net24 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM8 net24 A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM7 Y B net23 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net23 C VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net26 B VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM2 Y A net26 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM12 Y B net25 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM13 net28 B VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM14 Y C net28 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM0 net25 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM15 net27 C VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM16 Y A net27 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT NOR2X1 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM2 Y B net010 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM1 net010 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM3 Y B VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM0 Y A VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+.ENDS
+
+.SUBCKT NOR2X2 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM2 Y B net010 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 wlvs=25.0341u 
++ llvs=511.853n vcpg=80.6777a
+XM1 net010 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=2 DWPoly=0 DWsds=0 DWsdi=0 wlvs=25.0341u 
++ llvs=511.853n vcpg=80.6777a
+XM3 Y B VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 Y A VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+.ENDS
+
+.SUBCKT NOR3X1 A B C VDD VSS Y
+*.PININFO A:I B:I C:I Y:O VDD:B VSS:B
+XM4 Y C net010 VDD pch_5_mac_egl4_lvs A=7.5u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=17.9171u 
++ llvs=508.281n vcpg=40.3389a
+XM2 net010 B net012 VDD pch_5_mac_egl4_lvs A=7.5u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=17.9171u 
++ llvs=508.281n vcpg=40.3389a
+XM1 net012 A VDD VDD pch_5_mac_egl4_lvs A=7.5u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=17.9171u 
++ llvs=508.281n vcpg=40.3389a
+XM5 Y C VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM3 Y B VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM0 Y A VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+.ENDS
+
+.SUBCKT OAI21X1 A0 A1 B0 VDD VSS Y
+*.PININFO A0:I A1:I B0:I Y:O VDD:B VSS:B
+XM11 Y B0 net07 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 net07 A1 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net07 A0 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM8 Y B0 VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=20.0493a
+XM2 net015 A1 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM1 Y A0 net015 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+.ENDS
+
+.SUBCKT OR2X2 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM4 Y net06 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM2 net06 B net013 VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM1 net013 A VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM6 Y net06 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net06 B VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM0 net06 A VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+.ENDS
+
+.SUBCKT TLATNCAX2 CK E ECK VDD VSS
+*.PININFO CK:I E:I ECK:O VDD:B VSS:B
+XM46 ECK net042 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM50 ECK net043 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM42 net042 ckp VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM39 net042 MC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM29 MA MD VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM28 net081 E VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM35 net083 MC VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM34 MD ckn net083 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM32 MD ckp net081 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM20 MC MB VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM18 ckp ckn VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM13 net086 MA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM12 MB ckp net085 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM5 net085 E VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM16 ckn CK VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM38 net043 ckp VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM14 MB ckn net086 VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 net043 MA VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM41 net077 MC VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM51 ECK net043 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM37 MD ckp net080 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM36 net080 MA VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM30 MA MB VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM33 MD ckn net082 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM31 net082 E VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM40 net042 ckp net077 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM21 MC MD VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM19 ckp ckn VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM17 ckn CK VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM8 MB ckn net087 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM4 net087 E VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM48 net010 MA VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM49 ECK net042 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM9 net084 MC VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+XM43 net043 ckp net010 VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM15 MB ckp net084 VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n 
++ H=500.0n Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.39706u 
++ llvs=533.743n vcpg=40.3389a
+.ENDS
+
+.SUBCKT XNOR2X1 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+XM9 net18 net17 VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM7 net17 B VDD VDD pch_5_mac_egl4_lvs A=4.8u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=12.5171u 
++ llvs=511.853n vcpg=40.3389a
+XM5 net17 A Y VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM3 net18 net28 Y VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM0 net28 A VDD VDD pch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM8 net18 net17 VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM6 net17 B VSS VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM4 net17 net28 Y VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM2 net18 A Y VSS nch_5_mac_egl4_lvs A=2.1u B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=7.11706u 
++ llvs=520.847n vcpg=40.3389a
+XM1 net28 A VSS VSS nch_5_mac_egl4_lvs A=740.00n B=740.00n D=100.0n H=500.0n 
++ Hat=150.00n Hab=660.00n NF=1 DWPoly=0 DWsds=0 DWsdi=0 wlvs=4.27572u 
++ llvs=531.793n vcpg=20.0493a
+.ENDS
+

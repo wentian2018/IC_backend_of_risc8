@@ -1,0 +1,11 @@
+modelFile(
+    '("_PDKDIR_/models/spectre/c025bcdgen2_v0d5_usage.scs" "ss_lib")
+    '("_EGLDIR_/models/spectre/tsmc025egl.scs"             "ss_5_egl")
+    '("_EGLDIR_/models/spectre/tsmc025egl_ldmos.scs"       "ss_hv_egl")
+    '("_EGLDIR_/models/spectre/tsmc025egl_res_iso.scs"     "ss_disres_iso")
+    '("_THISDIR_/fixed/pex/rcc.scs")
+)
+option(	'temp  "125.0" )
+temp( 125.0 )
+
+desVar(	  "vdd" 2.97	)

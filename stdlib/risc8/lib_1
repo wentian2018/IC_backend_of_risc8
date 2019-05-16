@@ -1,0 +1,13 @@
+/*=========================================================================*\
+ * For SMIC 65LL/55LL Logic 1.2/2.5/3.3V Process
+ * Metal option: 1P9M_8Ic_1TMc_ALPA1
+ * 
+ * Reference technology documents:
+ *   1. Design Rule:       TD-LO55-DR-2002     rev. 5
+ *   2. SPICE Model:       TD-LO55-SP-2002     rev. 4
+ * 
+ * Copyright (c) 2016-2018 Cogenda Pte Ltd
+ * 
+ * All rights reserved
+ * 
+\*=========================================================================*/

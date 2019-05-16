@@ -1,0 +1,4 @@
+icc_shell> start_gui
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+icc_shell> 
+Exit IC Compiler!

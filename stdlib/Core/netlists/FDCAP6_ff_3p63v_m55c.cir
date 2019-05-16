@@ -1,0 +1,39 @@
+* File: rcx_out.net
+* Created: Tue Mar 26 09:51:58 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* 
+* 
+* .include "rcx_out.net.pex"
+* BEGIN of "./rcx_out.net.pex"
+* File: rcx_out.net.pex
+* Created: Tue Mar 26 09:51:58 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* Nominal Temperature: 27C
+* Circuit Temperature: 27C
+* 
+
+* END of "./rcx_out.net.pex"
+* 
+.subckt FDCAP6  VDD VSS
+* 
+XM1/X1 net4 net3 VSS VSS nch_5_mac_egl1 A=9e-06 B=1e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM0/X1 net3 net4 VDD VDD pch_5_mac_egl1 A=9e-06 B=1e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+*
+* 
+* .include "rcx_out.net.FDCAP6.pxi"
+* BEGIN of "./rcx_out.net.FDCAP6.pxi"
+* File: rcx_out.net.FDCAP6.pxi
+* Created: Tue Mar 26 09:51:58 2019
+* 
+
+* END of "./rcx_out.net.FDCAP6.pxi"
+* 
+*
+.ends
+*
+*
+

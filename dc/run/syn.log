@@ -1,0 +1,1884 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/zhouwt/.synopsys_dv_prefs.tcl
+set design_name risc8
+risc8
+create_mw_lib  -technology ../../ref1/tech/cb13_6m.tf -mw_reference_library                           {../../ref1/mw_lib/ram16x128                            ../../ref1/mw_lib/io                            ../../ref1/mw_lib/ram4x32                            ../../ref1/mw_lib/ram8x64                            ../../ref1/mw_lib/special                            ../../ref1/mw_lib/sc                            ../../ref1/mw_lib/ram32x64 } -bus_naming_style {[%d]} -open risc8_dc
+Start to load technology file ../../ref1/tech/cb13_6m.tf.
+Warning: Layer 'PRODUM' is missing the attribute 'minSpacing'. (line 312) (TFCHK-014)
+Warning: Layer 'PRODUM' is missing the attribute 'minWidth'. (line 312) (TFCHK-014)
+Warning: Layer 'METAL' has a pitch 0.41 that does not match the recommended wire-to-via pitch 0.66. (TFCHK-049)
+Warning: Layer 'METAL3' has a pitch 0.41 that does not match the doubled pitch 0.82 or tripled pitch 1.23. (TFCHK-050)
+Warning: Layer 'METAL4' has a pitch 0.515 that does not match the doubled pitch 0.82 or tripled pitch 1.23. (TFCHK-050)
+Warning: Layer 'METAL5' has a pitch 0.81 that does not match the doubled pitch 0.82 or tripled pitch 1.23. (TFCHK-050)
+Warning: Layer 'METAL6' has a pitch 0.97 that does not match the doubled pitch 1.03 or tripled pitch 1.545. (TFCHK-050)
+Warning: CapModel sections are missing. Capacitance models should be loaded with a TLU+ file later. (TFCHK-084)
+Technology file ../../ref1/tech/cb13_6m.tf has been loaded successfully.
+{risc8_dc}
+check_library
+Loading db file '/home/zhouwt/risc8/ref1/db/io_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram16x128_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram32x64_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram4x32_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram8x64_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_pg_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/special_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/io_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram16x128_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram32x64_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram4x32_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram8x64_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_pg_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/special_min.db'
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13io320_tsmc_max
+    File name                 /home/zhouwt/risc8/ref1/db/io_max.db
+    Library type              non-pg_pin based db
+    Library Version           1.000000
+    Tool Created              2003.06
+    Data Created              14-Nov-101 (INF CREATED ON 14-NOV-2001)
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:11 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13io320_tsmc_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 86)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram16x128_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram16x128_max
+    File name                 /home/zhouwt/risc8/ref1/db/ram16x128_max.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:11 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram16x128_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram16x128_max(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram32x64_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram32x64_max
+    File name                 /home/zhouwt/risc8/ref1/db/ram32x64_max.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:11 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram32x64_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram32x64_max(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram4x32_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram4x32_max
+    File name                 /home/zhouwt/risc8/ref1/db/ram4x32_max.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:11 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram4x32_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram4x32_max(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram8x64_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram8x64_max
+    File name                 /home/zhouwt/risc8/ref1/db/ram8x64_max.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram8x64_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram8x64_max(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13fs120_tsmc_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13fs120_tsmc_max
+    File name                 /home/zhouwt/risc8/ref1/db/sc_max.db
+    Library type              non-pg_pin based db
+    Library Version           1.000000
+    Tool Created              2003.06
+    Data Created              21-Jun-101 (INF CREATED ON 1-JUL-2001)
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13fs120_tsmc_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 537)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13fs120_tsmc_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13fs120_tsmc_max
+    File name                 /home/zhouwt/risc8/ref1/db/sc_pg_max.db
+    Library type              pg_pin based db
+    Library Version           1.000000
+    Tool Created              B-2008.09-ICC-SP2
+    Data Created              21-Jun-101 (INF CREATED ON 1-JUL-2001)
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13fs120_tsmc_max):
+PG checking passed.
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 537)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13special_max ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13special_max
+    File name                 /home/zhouwt/risc8/ref1/db/special_max.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              Z-2007.03-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13special_max):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                cb13special_max(lib#1)
+------------------------------------------------------------------------------
+Total number                2
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 2)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13io320_tsmc_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13io320_tsmc_min
+    File name                 /home/zhouwt/risc8/ref1/db/io_min.db
+    Library type              non-pg_pin based db
+    Library Version           1.000000
+    Tool Created              2003.06
+    Data Created              14-Nov-101 (INF CREATED ON 14-NOV-2001)
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13io320_tsmc_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 86)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram16x128_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram16x128_min
+    File name                 /home/zhouwt/risc8/ref1/db/ram16x128_min.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram16x128_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram16x128_min(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram32x64_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram32x64_min
+    File name                 /home/zhouwt/risc8/ref1/db/ram32x64_min.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram32x64_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram32x64_min(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram4x32_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram4x32_min
+    File name                 /home/zhouwt/risc8/ref1/db/ram4x32_min.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram4x32_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram4x32_min(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library ram8x64_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              ram8x64_min
+    File name                 /home/zhouwt/risc8/ref1/db/ram8x64_min.db
+    Library type              non-pg_pin based db
+    Library Version           .1.0
+    Tool Created              W-2004.12
+    Data Created              .18-Dec-2001
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (ram8x64_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                ram8x64_min(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13fs120_tsmc_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13fs120_tsmc_min
+    File name                 /home/zhouwt/risc8/ref1/db/sc_min.db
+    Library type              non-pg_pin based db
+    Library Version           1.000000
+    Tool Created              V-2004.06-SP2
+    Data Created              4-Jul-101 (INF CREATED ON 4-JUL-2001)
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:12 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13fs120_tsmc_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 537)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13fs120_tsmc_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13fs120_tsmc_min
+    File name                 /home/zhouwt/risc8/ref1/db/sc_pg_min.db
+    Library type              pg_pin based db
+    Library Version           1.000000
+    Tool Created              B-2008.09-ICC-SP2
+    Data Created              4-Jul-101 (INF CREATED ON 4-JUL-2001)
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:13 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13fs120_tsmc_min):
+PG checking passed.
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 537)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library cb13special_min ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              cb13special_min
+    File name                 /home/zhouwt/risc8/ref1/db/special_min.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              Z-2007.03-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1pW
+    Current unit              1uA
+check_library options        Version                       K-2015.06
+Check date and time           Thu May 16 13:26:13 2019
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (cb13special_min):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                cb13special_min(lib#1)
+------------------------------------------------------------------------------
+Total number                2
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 2)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+1
+set_tlu_plus_file  -max_tluplus ../../ref1/tlup/cb13_6m_max.tluplus                    -min_tluplus ../../ref1/tlup/cb13_6m_min.tluplus                    -tech2itf_map  ../../ref1/tlup/cb13_6m.map
+Error: unknown command 'set_tlu_plus_file' (CMD-005)
+check_tlu_plus_files
+Error: unknown command 'check_tlu_plus_files' (CMD-005)
+set_svf ../outputs/risc8.svf
+1
+analyze -f verilog {cpu.v  alu.v  dram.v  idec.v  regs.v}
+Running PRESTO HDLC
+Compiling source file ../../rtl/cpu.v
+Compiling source file ../../rtl/alu.v
+Compiling source file ../../rtl/dram.v
+Compiling source file ../../rtl/idec.v
+Compiling source file ../../rtl/regs.v
+Presto compilation completed successfully.
+Loading db file '/opt/synopsys/syn201506/libraries/syn/dw_foundation.sldb'
+1
+elaborate cpu
+Loading db file '/opt/synopsys/syn201506/libraries/syn/gtech.db'
+Loading db file '/opt/synopsys/syn201506/libraries/syn/standard.sldb'
+  Loading link library 'cb13io320_tsmc_max'
+  Loading link library 'ram16x128_max'
+  Loading link library 'ram32x64_max'
+  Loading link library 'ram4x32_max'
+  Loading link library 'ram8x64_max'
+  Loading link library 'cb13fs120_tsmc_max'
+  Loading link library 'cb13fs120_tsmc_max'
+  Loading link library 'cb13special_max'
+  Loading link library 'cb13io320_tsmc_min'
+  Loading link library 'ram16x128_min'
+  Loading link library 'ram32x64_min'
+  Loading link library 'ram4x32_min'
+  Loading link library 'ram8x64_min'
+  Loading link library 'cb13fs120_tsmc_min'
+  Loading link library 'cb13fs120_tsmc_min'
+  Loading link library 'cb13special_min'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 393 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           394            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 449 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           462            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 523 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           524            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 563 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           564            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 588 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           589            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 600 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           601            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 632 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           651            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 848 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           849            |    auto/user     |
+===============================================
+$display output: Too many CALLs!!
+$display output: Too many CALLs!!
+
+Statistics for case statements in always block at line 867 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           874            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 908 in file
+	'../../rtl/cpu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           913            |    auto/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine cpu line 247 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    phase_cnt_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 259 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       q4_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       q1_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 542 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      inst_reg       | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 610 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        w_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 632 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tmr0_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 668 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    prescaler_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 688 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     status_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 722 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       fsr_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 739 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     option_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 753 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      porta_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 758 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      portb_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 774 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      portc_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 844 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       pc_reg        | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 867 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     stack1_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stack2_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cpu line 908 in file
+		'../../rtl/cpu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   stacklevel_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'cpu'.
+Information: Building the design 'regs'. (HDL-193)
+
+Statistics for case statements in always block at line 106 in file
+	'../../rtl/regs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           107            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+
+Statistics for case statements in always block at line 56 in file
+	'../../rtl/alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            57            |    auto/user     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'idec'. (HDL-193)
+
+Statistics for case statements in always block at line 76 in file
+	'../../rtl/idec.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            77            |    auto/user     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'dram'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dram line 78 in file
+		'../../rtl/dram.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dout_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dram line 82 in file
+		'../../rtl/dram.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  560  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+saif_map -start
+Information: The SAIF name mapping information database is now active. (PWR-602)
+1
+source syn.sdc
+1
+check_timing
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'idec' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'alu' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'dram' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'regs' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width11' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_11_1_11' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_1_8' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_inc_width2' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_2_1_2' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_sub_width9' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*SUB_UNS_OP_8_8_9' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_add_width9' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_8_8_9' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width2' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_1_2_1' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width2' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_2_2_1' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width2' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_2_2_1' from '(none)' to 'ForQA'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'cpu' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+Warning: there are 30 input ports that only have partial input delay specified. (TIM-212)
+--------------------
+clk
+reset
+pdata[11]
+pdata[10]
+pdata[9]
+pdata[8]
+pdata[7]
+pdata[6]
+pdata[5]
+pdata[4]
+pdata[3]
+pdata[2]
+pdata[1]
+pdata[0]
+portain[7]
+portain[6]
+portain[5]
+portain[4]
+portain[3]
+portain[2]
+portain[1]
+portain[0]
+expdin[7]
+expdin[6]
+expdin[5]
+expdin[4]
+expdin[3]
+expdin[2]
+expdin[1]
+expdin[0]
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#############Compile Options##########
+if { [ file exists ../../config/config_options.tcl ] } {
+	source -echo -v ../../config/config_options.tcl
+}
+#convert tri to wire
+set verilogout_no_tri true
+true
+set verilogout_show_unconnected_pins true
+true
+set test_default_scan_style multiplexed_flip_flop
+multiplexed_flip_flop
+set timing_enable_multiple_clocks_per_reg true
+true
+####remove assign use buffers#####
+###set_fix_multiple_port_nets -feedthroughs
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set compile_seqmap_enable_output_inversion true
+true
+set_leakage_optimization false
+0
+#set_cost_priority -default
+# redundant logic for glitch filtering
+# prevent DC from removing this
+################Group-path##############
+group_path -name INPUTS -from [all_inputs]
+1
+group_path -name OUTPUTS -to [all_outputs]
+1
+group_path -name COMB -from [all_inputs] -to [all_outputs]
+1
+group_path -name clk  -weight 5 -critical_range 0.3
+1
+#balance_buffer -from clk
+##########clock gating#######
+#        compile_ultra -scan -gate_clock
+###########DFT###########
+#create_test_protocol
+#dft_drc -v
+#insert_dft
+#############compile#########
+compile_ultra
+Information: compile_ultra automatically performs leakage power optimization. It no longer needs to be enabled, and it cannot be disabled within compile_ultra. (PWR-884)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/zhouwt/risc8/ref1/db/io_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram16x128_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram32x64_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram4x32_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram8x64_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/special_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/io_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram16x128_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram32x64_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram4x32_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/ram8x64_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/special_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/sc_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/sc_pg_max.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/sc_min.db"
+Analyzing: "/home/zhouwt/risc8/ref1/db/sc_pg_min.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 26 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: IO pad 'pc3d10' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'pc3d00' is unusable: unknown logic function.  (OPT-1022)
+  Loading target library 'cb13io320_tsmc_max'
+  Loading target library 'ram16x128_max'
+  Loading target library 'ram32x64_max'
+  Loading target library 'ram4x32_max'
+  Loading target library 'ram8x64_max'
+  Loading target library 'cb13fs120_tsmc_max'
+  Loading target library 'cb13special_max'
+  Loading target library 'cb13io320_tsmc_min'
+  Loading target library 'ram16x128_min'
+  Loading target library 'ram32x64_min'
+  Loading target library 'ram4x32_min'
+  Loading target library 'ram8x64_min'
+  Loading target library 'cb13fs120_tsmc_min'
+  Loading target library 'cb13fs120_tsmc_min'
+  Loading target library 'cb13special_min'
+Warning: IO pad 'pc3d10' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'pc3d00' is unusable: unknown logic function.  (OPT-1022)
+Loaded alib file './alib-52/io_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram16x128_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram32x64_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram4x32_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram8x64_max.db.alib' (placeholder)
+Loaded alib file './alib-52/sc_max.db.alib'
+Loaded alib file './alib-52/sc_pg_max.db.alib'
+Loaded alib file './alib-52/special_max.db.alib' (placeholder)
+Loaded alib file './alib-52/io_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram16x128_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram32x64_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram4x32_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram8x64_min.db.alib' (placeholder)
+Loaded alib file './alib-52/sc_min.db.alib'
+Loaded alib file './alib-52/sc_pg_min.db.alib'
+Loaded alib file './alib-52/special_min.db.alib' (placeholder)
+Warning: Operating condition cb13io320_tsmc_max set on design cpu has different process,
+voltage and temperatures parameters than the parameters at which target library 
+cb13io320_tsmc_min is characterized. Delays may be inaccurate as a result. (OPT-998)
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy regs before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy alu before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy idec before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy regs/dram before Pass 1 (OPT-776)
+Information: Ungrouping 4 of 5 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'cpu'
+Information: Added key list 'DesignWare' to design 'cpu'. (DDB-72)
+ Implement Synthetic for 'cpu'.
+Memory usage for J1 task 435 Mbytes -- main task 435 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The register 'phase_cnt_reg[1]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+Information: In design 'cpu', the register 'q4_reg' is removed because it is merged to 'phase_cnt_reg[0]'. (OPT-1215)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:02    8446.3      0.81     642.8       0.0                           43120472.0000
+    0:01:24    8918.4      0.49      80.7       0.0                           47190200.0000
+    0:01:24    8918.4      0.49      80.7       0.0                           47190200.0000
+    0:01:27    8919.9      0.49      85.8       0.0                           47092280.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:33    8769.0      0.49      96.5       0.0                           45783784.0000
+    0:01:33    8769.3      0.49      88.8       0.0                           45794052.0000
+    0:01:33    8769.3      0.49      88.8       0.0                           45794052.0000
+    0:02:05    9060.6      0.49      15.1       0.0                           48023528.0000
+    0:02:05    9060.6      0.49      15.1       0.0                           48023528.0000
+    0:02:06    9060.6      0.49      15.1       0.0                           48023528.0000
+    0:02:06    9060.6      0.49      15.1       0.0                           48023528.0000
+    0:02:33    9142.8      0.49      19.5       0.0                           48511300.0000
+    0:02:33    9142.8      0.49      19.5       0.0                           48511300.0000
+    0:02:45    9198.0      0.49       6.9       0.0                           49080208.0000
+    0:02:45    9198.0      0.49       6.9       0.0                           49080208.0000
+    0:02:48    9197.5      0.49       6.9       0.0                           49056944.0000
+    0:02:48    9197.5      0.49       6.9       0.0                           49056944.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:50    9198.3      0.49       6.9       0.0                           49065712.0000
+    0:02:51    9199.8      0.48       6.9       0.0                           49036412.0000
+    0:02:52    9202.4      0.48       6.9       0.0                           49075440.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:52    9202.4      0.48       6.9       0.0                           49075440.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+    0:03:12    8994.7      0.47       5.9       0.0                           46329056.0000
+    0:03:13    8995.7      0.47       5.9       0.0                           46337740.0000
+    0:03:13    8995.7      0.47       5.9       0.0                           46337740.0000
+    0:03:13    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:13    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:13    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:13    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:13    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:13    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:14    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:14    8987.5      0.47       5.9       0.0                           46237964.0000
+    0:03:16    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:16    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:17    8995.8      0.47       6.0       0.0                           46320800.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:03:18    8995.8      0.47       6.0       0.0                           46320800.0000
+    0:03:18    8943.7      0.47       6.0       0.0                           45789484.0000
+    0:03:20    8918.4      0.47       6.0       0.0                           45642532.0000
+    0:03:20    8918.4      0.47       6.0       0.0                           45642532.0000
+    0:03:20    8917.4      0.47       6.0       0.0                           45643460.0000
+    0:03:21    8892.6      0.47       5.8       0.0                           45422240.0000
+    0:03:21    8892.6      0.47       5.8       0.0                           45422240.0000
+    0:03:22    8892.1      0.47       5.8       0.0                           45409608.0000
+    0:03:22    8892.1      0.47       5.8       0.0                           45409608.0000
+    0:03:23    8846.6      0.47       5.7       0.0                           44890548.0000
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/io_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram16x128_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram32x64_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram4x32_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram8x64_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_pg_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/special_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/io_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram16x128_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram32x64_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram4x32_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram8x64_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_pg_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/special_min.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'cb13io320_tsmc_max'
+  Loading target library 'ram16x128_max'
+  Loading target library 'ram32x64_max'
+  Loading target library 'ram4x32_max'
+  Loading target library 'ram8x64_max'
+  Loading target library 'cb13special_max'
+  Loading target library 'cb13io320_tsmc_min'
+  Loading target library 'ram16x128_min'
+  Loading target library 'ram32x64_min'
+  Loading target library 'ram4x32_min'
+  Loading target library 'ram8x64_min'
+  Loading target library 'cb13fs120_tsmc_min'
+  Loading target library 'cb13fs120_tsmc_min'
+  Loading target library 'cb13special_min'
+Warning: IO pad 'pc3d10' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'pc3d00' is unusable: unknown logic function.  (OPT-1022)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra -incremental -only_design_rule
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Loaded alib file './alib-52/io_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram16x128_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram32x64_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram4x32_max.db.alib' (placeholder)
+Loaded alib file './alib-52/ram8x64_max.db.alib' (placeholder)
+Loaded alib file './alib-52/sc_max.db.alib'
+Loaded alib file './alib-52/sc_pg_max.db.alib'
+Loaded alib file './alib-52/special_max.db.alib' (placeholder)
+Loaded alib file './alib-52/io_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram16x128_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram32x64_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram4x32_min.db.alib' (placeholder)
+Loaded alib file './alib-52/ram8x64_min.db.alib' (placeholder)
+Loaded alib file './alib-52/sc_min.db.alib'
+Loaded alib file './alib-52/sc_pg_min.db.alib'
+Loaded alib file './alib-52/special_min.db.alib' (placeholder)
+Warning: Operating condition cb13io320_tsmc_max set on design cpu has different process,
+voltage and temperatures parameters than the parameters at which target library 
+cb13io320_tsmc_min is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_pg_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/io_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram16x128_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram32x64_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram4x32_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram8x64_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/special_max.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/io_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram16x128_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram32x64_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram4x32_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/ram8x64_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/sc_pg_min.db'
+Loading db file '/home/zhouwt/risc8/ref1/db/special_min.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+############################################
+check_design
+1
+###########Report and outputs##########
+report_timing -delay_type max -max_path 10 -transition_time -capacitance > ../reports/${design_name}_timing.rpt
+report_timing -delay_type min -max_path 10 -transition_time -capacitance >> ../reports/${design_name}_timing.rpt
+report_area                                > ../reports/${design_name}.rpt
+report_design                             >> ../reports/${design_name}.rpt
+report_cell                               >> ../reports/${design_name}.rpt
+report_power -nosplit                     >> ../reports/${design_name}.rpt
+report_constraint -all_violators -verbose >> ../reports/${design_name}.rpt
+echo "Loops\n"                            >> ../reports/${design_name}.rpt
+echo "====\n"                             >> ../reports/${design_name}.rpt
+report_timing -loops >> ../reports/${design_name}.rpt
+echo "Reporting Hierarchy\n"                    >> ../reports/${design_name}.rpt
+echo "===================\n"                    >> ../reports/${design_name}.rpt
+report_hier                                     >> ../reports/${design_name}.rpt
+get_designs -hier "*"                           >> ../reports/${design_name}.rpt
+echo "Reporting Fanout\n"                       >> ../reports/${design_name}.rpt
+echo "================\n"                       >> ../reports/${design_name}.rpt
+report_net_fanout -tree -threshold 100 -nosplit >> ../reports/${design_name}.rpt
+report_qor > ../reports/syn.rpt
+change_names -rules verilog -hierarchy
+1
+redirect change_names { change_names -rules verilog -hierarchy -verbose }
+set_svf off
+1
+if { ! [ file exists netlist ] } { file mkdir netlist }
+write -f ddc -hierarchy -output netlist/$design_name.ddc
+Writing ddc file 'netlist/risc8.ddc'.
+1
+write -f verilog -hierarchy -output netlist/$design_name.v
+Writing verilog file '/home/zhouwt/risc8/dc/run/netlist/risc8.v'.
+1
+write_sdc netlist/$design_name.sdc
+1
+write_sdf netlist/$design_name.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/zhouwt/risc8/dc/run/netlist/risc8.sdf'. (WT-3)
+1
+##############################################################
+if { [ file exists netlist/${design_name}.v ] } {
+	echo "" > _vmake
+}
+#if { [info exists ::env(STARTGUI)   ] } {
+start_gui
+Current design is 'cpu'.
+#} else {
+#quit
+dc_shell> dc_shell> Current design is 'cpu'.
+:q
+Error: unknown command ':q' (CMD-005)
+dc_shell> exit
+
+Memory usage for main task 456 Mbytes.
+Memory usage for this session 456 Mbytes.
+CPU usage for this session 1044 seconds ( 0.29 hours ).
+
+Thank you...

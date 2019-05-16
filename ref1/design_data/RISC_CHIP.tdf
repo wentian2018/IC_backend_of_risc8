@@ -1,0 +1,57 @@
+tdfPurgePadConstr
+
+; place the corner cells
+pad "cornerll" "bottom"
+pad "cornerur" "top"
+pad "cornerlr" "right"
+pad "cornerul" "left"
+
+
+; Left side pads
+pad "Instrn_iopad_0" "left" 1
+pad "vdd1left" "left" 2
+pad "vss1left" "left" 3
+pad "vdd2left" "left" 4
+pad "vss2left" "left" 5
+pad "Instrn_iopad_1" "left" 6
+pad "Instrn_iopad_2" "left" 7
+pad "Instrn_iopad_3" "left" 8
+pad "PSW_iopad_7" "left" 9
+pad "Xecutng_Instrn_iopad_0" "left" 10
+
+
+; Right side pads
+pad "RESULT_DATA_iopad_0" "right" 1
+pad "vdd1right" "right" 2
+pad "vss1right" "right" 3
+pad "vdd2right" "right" 4
+pad "vss2right" "right" 5
+pad "RESULT_DATA_iopad_1" "right" 6
+pad "RESULT_DATA_iopad_2" "right" 7
+pad "RESULT_DATA_iopad_3" "right" 8
+pad "PSW_iopad_9" "right" 9
+pad "Xecutng_Instrn_iopad_2" "right" 10
+
+; Top side pads
+pad "PSW_iopad_8" "top" 1
+pad "Xecutng_Instrn_iopad_1" "top" 2
+pad "PSW_iopad_0" "top" 3
+pad "PSW_iopad_2" "top" 4
+pad "PSW_iopad_4" "top" 5
+pad "PSW_iopad_6" "top" 6
+pad "OUT_VALID_iopad" "top" 7
+pad "EndOfInstrn_iopad" "top" 8
+pad "Test_Mode_iopad" "top" 9
+pad "clk_iopad" "top" 10
+
+; Bottom side pads
+pad "PSW_iopad_10" "bottom" 1
+pad "Xecutng_Instrn_iopad_3" "bottom" 2
+pad "PSW_iopad_1" "bottom" 3
+pad "PSW_iopad_3" "bottom" 4
+pad "PSW_iopad_5" "bottom" 5
+pad "STACK_FULL_iopad" "bottom" 6
+pad "Rd_Instr_iopad" "bottom" 7
+pad "reset_n_iopad" "bottom" 8
+pad "Test_Regfile_Clk_iopad" "bottom" 9
+pad "scan_en_iopad" "bottom" 10

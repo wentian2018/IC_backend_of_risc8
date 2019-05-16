@@ -1,0 +1,110 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Suppress known and/or annoying messages
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+suppress_message {TIM-112 TIM-052 OPT-170 PSYN-025 UID-401}
+suppress_message {PSYN-850 PSYN-087 PSYN-040 PSYN-088}
+
+# "Information" about changing wire load model and Warning about 12 high fanout nets
+# during sourcing of opt_ctrl.tcl file:
+suppress_message {OPT-171 TIM-134}
+
+# "Information" about 'SNPS_LOGIC0/1' having no connections 
+# during create_fp_placement:
+suppress_message {MWDC-040}
+
+# During congestion analysis:
+suppress_message {ZRT-026 ZRT-027}
+
+# Inconsistent lib data + idela and high fanout net warnings during report_timing:
+suppress_message {RCEX-018 RCEX-020 RCEX-021 TIM-134}
+
+# AHFS warning during optimize_fp_timing:
+suppress_message {PSYN-1002}
+
+# "Extra braces" warning during write_floorplan:
+suppress_message {MWUI-041}
+
+# Warnings during 2nd pass data setup and loading of DEF:
+suppress_message {TFCHK-049 TFCHK-050 TFCHK-055 TFCHK-084 MWDEFR-159 DDEFR 054 DDEFR-010 DDEFR-011 DDEFR-012}
+
+# Warning during final "legalize_placement" that the MACROS are "not integer multiples of min site height"
+suppress_message {PSYN-523}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Load useful "functions" or procedures, like "view"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+source ../ref/tools/procs.tcl
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# General useful settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Disable more-like page mode
+set enable_page_mode false
+# Don't want to see CMD-041 when creating new variables
+set sh_new_variable_message false
+# Increase history buffer from 20 commands to 100
+history keep 100
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Enable logging of commands and everything by date/shell
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set timestamp [clock format [clock scan now] -format "%Y-%m-%d_%H-%M"]
+set sh_output_log_file "${synopsys_program_name}.log.[pid].$timestamp"
+set sh_command_log_file "${synopsys_program_name}.cmd.[pid].$timestamp"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Aliases
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+alias v view
+alias rt  "report_timing -nosplit"
+alias rtm "report_timing -nosplit -delay min"
+alias rc  "report_constraint -all_violators -nosplit"
+alias rq report_qor
+alias h history
+alias _ measure_time
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Define tie-high/tie-low (logic 1 and logic 0) net names
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#set mw_logic0_net "VSS"
+#set mw_logic1_net "VDD"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Logic Library settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+lappend search_path ../ref/db ../ref/tlup
+set_app_var target_library "sc_max.db"
+set_app_var link_library "* sc_max.db io_max.db special_max.db ram16x128_max.db ram4x32_max.db ram8x64_max.db ram32x64_max.db"
+set_min_library sc_max.db -min_version sc_min.db
+set_min_library io_max.db -min_version io_min.db
+set_min_library special_max.db -min_version special_min.db
+set_min_library ram16x128_max.db -min_version ram16x128_min.db
+set_min_library ram4x32_max.db -min_version ram4x32_min.db
+set_min_library ram8x64_max.db -min_version ram8x64_min.db
+set_min_library ram32x64_max.db -min_version ram32x64_min.db
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# ORCA setup variables
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set my_mw_lib    orca_lib.mw
+set mw_path      "../ref/mw_lib"
+set tech_file    "../ref/tech/cb13_6m.tf"
+set tlup_map     "../ref/tlup/cb13_6m.map"
+set tlup_max     "../ref/tlup/cb13_6m_max.tluplus"
+set tlup_min     "../ref/tlup/cb13_6m_min.tluplus"
+set top_design   "ORCA"
+set verilog_file "./design_data/RISC_CHIP.v"
+set sdc_file     "./design_data/RISC_CHIP.sdc"
+set def_file     "./design_data/RISC_CHIP.def"
+set ctrl_file    "./scripts/opt_ctrl.tcl"
+set derive_pg_file    "./scripts/derive_pg.tcl"
+set libs         {sc io special ram4x32 ram8x64 ram32x64 ram16x128}
+set mw_ref_libs ""
+foreach lib $libs {
+        lappend mw_ref_libs $mw_path/$lib
+}

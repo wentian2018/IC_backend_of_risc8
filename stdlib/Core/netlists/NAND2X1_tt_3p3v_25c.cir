@@ -1,0 +1,47 @@
+* File: rcx_out.net
+* Created: Tue Mar 26 09:44:34 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* 
+* 
+* .include "rcx_out.net.pex"
+* BEGIN of "./rcx_out.net.pex"
+* File: rcx_out.net.pex
+* Created: Tue Mar 26 09:44:34 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* Nominal Temperature: 27C
+* Circuit Temperature: 27C
+* 
+
+* END of "./rcx_out.net.pex"
+* 
+.subckt NAND2X1  A B VDD VSS Y
+* 
+XM2/X1 Y A net7 VSS nch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=8.1313e-12 PD=2.29488e-05
+XM1/X1 net7 B VSS VSS nch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=8.1313e-12 PD=2.29488e-05
+XM3/X1 Y A VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=8.1313e-12 PD=2.29488e-05
+XM0/X1 Y B VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=8.1313e-12 PD=2.29488e-05
+*
+* 
+* .include "rcx_out.net.NAND2X1.pxi"
+* BEGIN of "./rcx_out.net.NAND2X1.pxi"
+* File: rcx_out.net.NAND2X1.pxi
+* Created: Tue Mar 26 09:44:34 2019
+* 
+
+* END of "./rcx_out.net.NAND2X1.pxi"
+* 
+*
+.ends
+*
+*
+

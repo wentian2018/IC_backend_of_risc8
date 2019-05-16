@@ -1,0 +1,2418 @@
+
+(edif CADENCE_EDIF
+    (edifVersion 2 0 0)
+    (edifLevel 0)
+    (keywordMap (keywordLevel 0))
+    (library cgd_t025_g5
+        (edifLevel 0)
+        (technology
+            (numberDefinition
+                (scale 160 (E 25400 -6) (unit DISTANCE))
+             )
+         )
+(cell DFFX1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port Q (direction OUTPUT))
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port CK (direction INPUT))
+   (port D (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -110) (pt 120 25)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 20 -92))))
+     (figure device (path (pointList
+       (pt 120 0) (pt 100 0))))
+     (figure device (path (pointList
+       (pt 20 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 20 -75) (pt 25 -80)
+       (pt 20 -85))))
+     (figure device (path (pointList
+       (pt 20 -80) (pt 0 -80))))
+     (figure device (rectangle (pt 20 -90) (pt 100 10)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 20 13))))
+    (portImplementation
+       (name D
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -4))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    (portImplementation
+       (name CK
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 27 -84))))
+      (connectLocation
+       (figure pin (dot (pt 0 -80))))
+     (figure device (rectangle (pt -2 -82) (pt 2 -78))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 -30))))
+     (figure device (rectangle (pt 59 -31) (pt 61 -29))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 -50))))
+     (figure device (rectangle (pt 59 -51) (pt 61 -49))))
+    (portImplementation
+       (name Q
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 85 -4))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    ))))
+
+(cell DFFX2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port Q (direction OUTPUT))
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port CK (direction INPUT))
+   (port D (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -110) (pt 120 25)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 20 -92))))
+     (figure device (path (pointList
+       (pt 120 0) (pt 100 0))))
+     (figure device (path (pointList
+       (pt 20 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 20 -75) (pt 25 -80)
+       (pt 20 -85))))
+     (figure device (path (pointList
+       (pt 20 -80) (pt 0 -80))))
+     (figure device (rectangle (pt 20 -90) (pt 100 10)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 20 13))))
+    (portImplementation
+       (name D
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -4))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    (portImplementation
+       (name CK
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 27 -84))))
+      (connectLocation
+       (figure pin (dot (pt 0 -80))))
+     (figure device (rectangle (pt -2 -82) (pt 2 -78))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 -30))))
+     (figure device (rectangle (pt 59 -31) (pt 61 -29))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 -50))))
+     (figure device (rectangle (pt 59 -51) (pt 61 -49))))
+    (portImplementation
+       (name Q
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 85 -4))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    ))))
+
+(cell INVX1 (cellType GENERIC)
+   (view symbol (viewType SCHEMATIC)
+    (interface
+     (port VSS (direction INOUT))
+     (port VDD (direction INOUT))
+     (port A (direction INPUT))
+     (port Y (direction OUTPUT))
+    (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+     (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+       (keywordDisplay instance
+    (display (figureGroupOverride instance (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 -22))))
+       (figure device (circle (pt 74 0) (pt 64 0)))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 -25))))
+       (figure device (path (pointList
+     (pt 21 -25) (pt 21 25))))
+       (figure device (path (pointList
+     (pt 74 0) (pt 100 0))))
+       (figure device (path (pointList
+     (pt 21 0) (pt 0 0))))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 25))))
+       (keywordDisplay cell
+    (display (figureGroupOverride device (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 11))))
+      (portImplementation
+     (name Y
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 36 -4))))
+    (connectLocation
+     (figure pin (dot (pt 100 0))))
+       (figure device (rectangle (pt 98 -2) (pt 102 2))))
+      (portImplementation
+     (name A
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 22 -4))))
+    (connectLocation
+     (figure pin (dot (pt 0 0))))
+       (figure device (rectangle (pt -2 -2) (pt 2 2))))
+      (portImplementation VDD
+    (connectLocation
+     (figure pin (dot (pt 30 10))))
+       (figure device (rectangle (pt 29 9) (pt 31 11))))
+      (portImplementation VSS
+    (connectLocation
+     (figure pin (dot (pt 30 -10))))
+       (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+      ))))
+
+(cell INVX2 (cellType GENERIC)
+   (view symbol (viewType SCHEMATIC)
+    (interface
+     (port VSS (direction INOUT))
+     (port VDD (direction INOUT))
+     (port A (direction INPUT))
+     (port Y (direction OUTPUT))
+    (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+     (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+       (keywordDisplay instance
+    (display (figureGroupOverride instance (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 -22))))
+       (figure device (circle (pt 74 0) (pt 64 0)))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 -25))))
+       (figure device (path (pointList
+     (pt 21 -25) (pt 21 25))))
+       (figure device (path (pointList
+     (pt 74 0) (pt 100 0))))
+       (figure device (path (pointList
+     (pt 21 0) (pt 0 0))))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 25))))
+       (keywordDisplay cell
+    (display (figureGroupOverride device (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 11))))
+      (portImplementation
+     (name Y
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 36 -4))))
+    (connectLocation
+     (figure pin (dot (pt 100 0))))
+       (figure device (rectangle (pt 98 -2) (pt 102 2))))
+      (portImplementation
+     (name A
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 22 -4))))
+    (connectLocation
+     (figure pin (dot (pt 0 0))))
+       (figure device (rectangle (pt -2 -2) (pt 2 2))))
+      (portImplementation VDD
+    (connectLocation
+     (figure pin (dot (pt 30 10))))
+       (figure device (rectangle (pt 29 9) (pt 31 11))))
+      (portImplementation VSS
+    (connectLocation
+     (figure pin (dot (pt 30 -10))))
+       (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+      ))))
+
+(cell INVX4 (cellType GENERIC)
+   (view symbol (viewType SCHEMATIC)
+    (interface
+     (port VSS (direction INOUT))
+     (port VDD (direction INOUT))
+     (port A (direction INPUT))
+     (port Y (direction OUTPUT))
+    (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+     (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+       (keywordDisplay instance
+    (display (figureGroupOverride instance (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 -22))))
+       (figure device (circle (pt 74 0) (pt 64 0)))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 -25))))
+       (figure device (path (pointList
+     (pt 21 -25) (pt 21 25))))
+       (figure device (path (pointList
+     (pt 74 0) (pt 100 0))))
+       (figure device (path (pointList
+     (pt 21 0) (pt 0 0))))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 25))))
+       (keywordDisplay cell
+    (display (figureGroupOverride device (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 11))))
+      (portImplementation
+     (name Y
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 36 -4))))
+    (connectLocation
+     (figure pin (dot (pt 100 0))))
+       (figure device (rectangle (pt 98 -2) (pt 102 2))))
+      (portImplementation
+     (name A
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 22 -4))))
+    (connectLocation
+     (figure pin (dot (pt 0 0))))
+       (figure device (rectangle (pt -2 -2) (pt 2 2))))
+      (portImplementation VDD
+    (connectLocation
+     (figure pin (dot (pt 30 10))))
+       (figure device (rectangle (pt 29 9) (pt 31 11))))
+      (portImplementation VSS
+    (connectLocation
+     (figure pin (dot (pt 30 -10))))
+       (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+      ))))
+
+(cell NAND2X2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port Y (direction OUTPUT))
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port A (direction INPUT))
+   (port B (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 90 20))))
+     (figure device (path (pointList
+       (pt 20 20) (pt 0 20))))
+     (figure device (path (pointList
+       (pt 65 -30) (pt 20 -30))))
+     (figure device (path (pointList
+       (pt 20 -20) (pt 0 -20))))
+     (figure device (circle (pt 105 0) (pt 95 0)))
+     (figure device (path (pointList
+       (pt 20 -30) (pt 20 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 65 -30) (pt 95 0) (pt 65 30)))))
+     (figure device (path (pointList
+       (pt 20 30) (pt 65 30))))
+     (figure device (path (pointList
+       (pt 121 0) (pt 105 0))))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 90 -15))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 -23))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 17))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 78 -3))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+   ))))
+
+(cell NOR2X2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port A (direction INPUT))
+   (port B (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port VDD (direction INOUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 17 -30) (pt 25 0) (pt 17 30)))))
+     (figure device (path (pointList
+       (pt 49 -30) (pt 17 -30))))
+     (figure device (path (pointList
+       (pt 49 30) (pt 17 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 100 0) (pt 79 22) (pt 49 30)))))
+     (figure device (path (pointList
+       (pt 110 0) (pt 120 0))))
+     (figure device (circle (pt 110 0) (pt 100 0)))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 49 -30) (pt 79 -22) (pt 100 0)))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 21 20))))
+     (figure device (path (pointList
+       (pt 0 -20) (pt 21 -20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 89 -14))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 89 15))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 81 -6))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+   ))))
+
+(cell XNOR2X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port B (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port A (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 69 -26))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 72 27))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 12 -30) (pt 20 0) (pt 12 30)))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 17 -30) (pt 25 0) (pt 17 30)))))
+     (figure device (path (pointList
+       (pt 49 -30) (pt 17 -30))))
+     (figure device (path (pointList
+       (pt 49 30) (pt 17 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 100 0) (pt 79 22) (pt 49 30)))))
+     (figure device (path (pointList
+       (pt 110 0) (pt 120 0))))
+     (figure device (circle (pt 110 0) (pt 100 0)))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 49 -30) (pt 79 -22) (pt 100 0)))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 16 20))))
+     (figure device (path (pointList
+       (pt 0 -20) (pt 16 -20))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 16))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 83 -5))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 25 -20))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 10))))
+     (figure device (rectangle (pt 59 9) (pt 61 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 -10))))
+     (figure device (rectangle (pt 59 -11) (pt 61 -9))))
+   ))))
+
+(cell AND2X2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port B (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port VDD (direction INOUT))
+   (port A (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (figure device (path (pointList
+       (pt 121 0) (pt 95 0))))
+     (figure device (path (pointList
+       (pt 20 30) (pt 65 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 65 -30) (pt 95 0) (pt 65 30)))))
+     (figure device (path (pointList
+       (pt 20 -30) (pt 20 30))))
+     (figure device (path (pointList
+       (pt 20 -20) (pt 0 -20))))
+     (figure device (path (pointList
+       (pt 65 -30) (pt 20 -30))))
+     (figure device (path (pointList
+       (pt 20 20) (pt 0 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 90 -15))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 90 20))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 81 -6))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+    ))))
+
+(cell OR2X2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port B (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port VDD (direction INOUT))
+   (port A (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (figure device (path (pointList
+       (pt 120 0) (pt 100 0))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 17 -30) (pt 25 0) (pt 17 30)))))
+     (figure device (path (pointList
+       (pt 49 -30) (pt 17 -30))))
+     (figure device (path (pointList
+       (pt 49 30) (pt 17 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 100 0) (pt 79 22) (pt 49 30)))))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 49 -30) (pt 79 -22) (pt 100 0)))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 21 20))))
+     (figure device (path (pointList
+       (pt 0 -20) (pt 21 -20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 89 -14))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 89 15))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 81 -6))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+   ))))
+
+(cell MUXN2X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port S0 (direction INPUT))
+   (port B (direction INPUT))
+   (port A (direction INPUT))
+   (port Y (direction OUTPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -60) (pt 100 60)))
+     (figure device (circle (pt 86 0) (pt 76 0)))
+     (figure device (path (pointList
+       (pt 20 25) (pt 20 15))))
+     (figure device (path (pointList
+       (pt 100 0) (pt 86 0))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 30 20))))
+     (figure device (path (pointList
+       (pt 0 -20) (pt 30 -20))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 -45))))
+     (figure device (path (pointList
+       (pt 76 23) (pt 76 -28))))
+     (figure device (path (pointList
+       (pt 50 -60) (pt 50 -38))))
+     (figure device (path (pointList
+       (pt 30 -45) (pt 76 -28))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 76 23))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 58 -37))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 58 34))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 65 -6))))
+      (connectLocation
+       (figure pin (dot (pt 100 0))))
+     (figure device (rectangle (pt 98 -2) (pt 102 2))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 32 16))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 31 -20))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name S0
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 43 -33))))
+      (connectLocation
+       (figure pin (dot (pt 50 -60))))
+     (figure device (rectangle (pt 48 -62) (pt 52 -58))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+   ))))
+
+(cell DFFNX1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port QN (direction OUTPUT))
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port CK (direction INPUT))
+   (port D (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -110) (pt 120 25)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 20 -92))))
+     (figure device (path (pointList
+       (pt 120 0) (pt 110 0))))
+     (figure device (path (pointList
+       (pt 20 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 20 -75) (pt 25 -80)
+       (pt 20 -85))))
+     (figure device (path (pointList
+       (pt 20 -80) (pt 0 -80))))
+     (figure device (rectangle (pt 20 -90) (pt 100 10)))
+     (figure device (circle (pt 110 0) (pt 100 0)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 20 13))))
+    (portImplementation
+       (name D
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -4))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    (portImplementation
+       (name CK
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 27 -84))))
+      (connectLocation
+       (figure pin (dot (pt 0 -80))))
+     (figure device (rectangle (pt -2 -82) (pt 2 -78))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 -30))))
+     (figure device (rectangle (pt 59 -31) (pt 61 -29))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 -50))))
+     (figure device (rectangle (pt 59 -51) (pt 61 -49))))
+    (portImplementation
+       (name QN
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 75 -4))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    ))))
+
+(cell INVX8 (cellType GENERIC)
+   (view symbol (viewType SCHEMATIC)
+    (interface
+     (port VSS (direction INOUT))
+     (port VDD (direction INOUT))
+     (port A (direction INPUT))
+     (port Y (direction OUTPUT))
+    (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+     (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+       (keywordDisplay instance
+    (display (figureGroupOverride instance (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 -22))))
+       (figure device (circle (pt 74 0) (pt 64 0)))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 -25))))
+       (figure device (path (pointList
+     (pt 21 -25) (pt 21 25))))
+       (figure device (path (pointList
+     (pt 74 0) (pt 100 0))))
+       (figure device (path (pointList
+     (pt 21 0) (pt 0 0))))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 25))))
+       (keywordDisplay cell
+    (display (figureGroupOverride device (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 11))))
+      (portImplementation
+     (name Y
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 36 -4))))
+    (connectLocation
+     (figure pin (dot (pt 100 0))))
+       (figure device (rectangle (pt 98 -2) (pt 102 2))))
+      (portImplementation
+     (name A
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 22 -4))))
+    (connectLocation
+     (figure pin (dot (pt 0 0))))
+       (figure device (rectangle (pt -2 -2) (pt 2 2))))
+      (portImplementation VDD
+    (connectLocation
+     (figure pin (dot (pt 30 10))))
+       (figure device (rectangle (pt 29 9) (pt 31 11))))
+      (portImplementation VSS
+    (connectLocation
+     (figure pin (dot (pt 30 -10))))
+       (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+      ))))
+
+(cell INVX16 (cellType GENERIC)
+   (view symbol (viewType SCHEMATIC)
+    (interface
+     (port VSS (direction INOUT))
+     (port VDD (direction INOUT))
+     (port A (direction INPUT))
+     (port Y (direction OUTPUT))
+    (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+     (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+       (keywordDisplay instance
+    (display (figureGroupOverride instance (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 -22))))
+       (figure device (circle (pt 74 0) (pt 64 0)))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 -25))))
+       (figure device (path (pointList
+     (pt 21 -25) (pt 21 25))))
+       (figure device (path (pointList
+     (pt 74 0) (pt 100 0))))
+       (figure device (path (pointList
+     (pt 21 0) (pt 0 0))))
+       (figure device (path (pointList
+     (pt 64 0) (pt 21 25))))
+       (keywordDisplay cell
+    (display (figureGroupOverride device (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 54 11))))
+      (portImplementation
+     (name Y
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 36 -4))))
+    (connectLocation
+     (figure pin (dot (pt 100 0))))
+       (figure device (rectangle (pt 98 -2) (pt 102 2))))
+      (portImplementation
+     (name A
+    (display (figureGroupOverride pin (textHeight 10))
+    (justify LOWERLEFT)
+    (orientation R0)
+    (origin (pt 22 -4))))
+    (connectLocation
+     (figure pin (dot (pt 0 0))))
+       (figure device (rectangle (pt -2 -2) (pt 2 2))))
+      (portImplementation VDD
+    (connectLocation
+     (figure pin (dot (pt 30 10))))
+       (figure device (rectangle (pt 29 9) (pt 31 11))))
+      (portImplementation VSS
+    (connectLocation
+     (figure pin (dot (pt 30 -10))))
+       (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+      ))))
+
+(cell NAND2X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port Y (direction OUTPUT))
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port A (direction INPUT))
+   (port B (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 90 20))))
+     (figure device (path (pointList
+       (pt 20 20) (pt 0 20))))
+     (figure device (path (pointList
+       (pt 65 -30) (pt 20 -30))))
+     (figure device (path (pointList
+       (pt 20 -20) (pt 0 -20))))
+     (figure device (circle (pt 105 0) (pt 95 0)))
+     (figure device (path (pointList
+       (pt 20 -30) (pt 20 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 65 -30) (pt 95 0) (pt 65 30)))))
+     (figure device (path (pointList
+       (pt 20 30) (pt 65 30))))
+     (figure device (path (pointList
+       (pt 121 0) (pt 105 0))))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 90 -15))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 -23))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 17))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 78 -3))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+   ))))
+
+(cell NOR2X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port A (direction INPUT))
+   (port B (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port VDD (direction INOUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 17 -30) (pt 25 0) (pt 17 30)))))
+     (figure device (path (pointList
+       (pt 49 -30) (pt 17 -30))))
+     (figure device (path (pointList
+       (pt 49 30) (pt 17 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 100 0) (pt 79 22) (pt 49 30)))))
+     (figure device (path (pointList
+       (pt 110 0) (pt 120 0))))
+     (figure device (circle (pt 110 0) (pt 100 0)))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 49 -30) (pt 79 -22) (pt 100 0)))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 21 20))))
+     (figure device (path (pointList
+       (pt 0 -20) (pt 21 -20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 89 -14))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 89 15))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 81 -6))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+   ))))
+
+(cell NAND3X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port A (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port C (direction INPUT))
+   (port B (direction INPUT))
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 90 15))))
+     (figure device (path (pointList
+       (pt 20 -30) (pt 20 30))))
+     (figure device (path (pointList
+       (pt 20 30) (pt 65 30))))
+     (figure device (path (pointList
+       (pt 65 -30) (pt 20 -30))))
+     (figure device (circle (pt 105 0) (pt 95 0)))
+     (figure device (path (pointList
+       (pt 20 -20) (pt 0 -20))))
+     (figure device (path (pointList
+       (pt 20 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 20 20) (pt 0 20))))
+     (figure device (path (pointList
+       (pt 120 0) (pt 105 0))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 65 -30) (pt 95 0) (pt 65 30)))))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 90 -15))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 -3))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    (portImplementation
+       (name C
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 -23))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 78 -3))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 23 17))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+   ))))
+
+(cell NAND4X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port D (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port B (direction INPUT))
+   (port C (direction INPUT))
+   (port VDD (direction INOUT))
+   (port A (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 65 -30) (pt 95 0) (pt 65 30)))))
+     (figure device (path (pointList
+       (pt 20 -30) (pt 20 30))))
+     (figure device (path (pointList
+       (pt 20 30) (pt 65 30))))
+     (figure device (circle (pt 105 0) (pt 95 0)))
+     (figure device (path (pointList
+       (pt 105 0) (pt 120 0))))
+     (figure device (path (pointList
+       (pt 65 -30) (pt 20 -30))))
+     (figure device (path (pointList
+       (pt 0 -30) (pt 20 -30))))
+     (figure device (path (pointList
+       (pt 0 -10) (pt 20 -10))))
+     (figure device (path (pointList
+       (pt 0 10) (pt 20 10))))
+     (figure device (path (pointList
+       (pt 0 30) (pt 20 30))))
+     (figure device (path (pointList
+       (pt 10 35) (pt 10 25))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 90 -15))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 90 20))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 19))))
+      (connectLocation
+       (figure pin (dot (pt 0 30))))
+     (figure device (rectangle (pt -2 28) (pt 2 32))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation
+       (name C
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -11))))
+      (connectLocation
+       (figure pin (dot (pt 0 -10))))
+     (figure device (rectangle (pt -2 -12) (pt 2 -8))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 4))))
+      (connectLocation
+       (figure pin (dot (pt 0 10))))
+     (figure device (rectangle (pt -2 8) (pt 2 12))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 76 -6))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name D
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -30))))
+     (figure device (rectangle (pt -2 -32) (pt 2 -28))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+    ))))
+
+(cell NOR3X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port Y (direction OUTPUT))
+   (port B (direction INPUT))
+   (port A (direction INPUT))
+   (port C (direction INPUT))
+   (port VDD (direction INOUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -40) (pt 120 40)))
+     (figure device (path (pointList
+       (pt 0 0) (pt 24 0))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 17 -30) (pt 25 0) (pt 17 30)))))
+     (figure device (path (pointList
+       (pt 49 -30) (pt 17 -30))))
+     (figure device (path (pointList
+       (pt 49 30) (pt 17 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 100 0) (pt 79 22) (pt 49 30)))))
+     (figure device (path (pointList
+       (pt 110 0) (pt 120 0))))
+     (figure device (circle (pt 110 0) (pt 100 0)))
+     (figure device (path (pointList
+       (pt 10 25) (pt 10 15))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 49 -30) (pt 79 -22) (pt 100 0)))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 21 20))))
+     (figure device (path (pointList
+       (pt 0 -20) (pt 21 -20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 89 -14))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 89 15))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 50 10))))
+     (figure device (rectangle (pt 49 9) (pt 51 11))))
+    (portImplementation
+       (name C
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 24 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 24 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 25 0))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 79 -6))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 50 -10))))
+     (figure device (rectangle (pt 49 -11) (pt 51 -9))))
+   ))))
+
+(cell AOI21X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port A1 (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port B0 (direction INPUT))
+   (port VDD (direction INOUT))
+   (port A0 (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -70) (pt 220 30)))
+     (figure device (path (pointList
+       (pt 105 25) (pt 105 15))))
+     (figure device (path (pointList
+       (pt 10 -15) (pt 10 -25))))
+     (figure device (path (pointList
+       (pt 95 -40) (pt 105 -40)
+       (pt 105 -20) (pt 115 -20))))
+     (figure device (path (pointList
+       (pt 20 -20) (pt 0 -20))))
+     (figure device (path (pointList
+       (pt 144 30) (pt 112 30))))
+     (figure device (path (pointList
+       (pt 65 -10) (pt 20 -10))))
+     (figure device (path (pointList
+       (pt 144 -30) (pt 112 -30))))
+     (figure device (path (pointList
+       (pt 205 0) (pt 220 0))))
+     (figure device (circle (pt 205 0) (pt 195 0)))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 144 -30) (pt 174 -22) (pt 195 0)))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 195 0) (pt 174 22) (pt 144 30)))))
+     (figure device (path (pointList
+       (pt 20 -70) (pt 65 -70))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 65 -70) (pt 95 -40) (pt 65 -10)))))
+     (figure device (path (pointList
+       (pt 20 -10) (pt 20 -70))))
+     (figure device (path (pointList
+       (pt 20 -60) (pt 0 -60))))
+     (figure device (path (pointList
+       (pt 0 20) (pt 117 20))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 112 -30) (pt 120 0) (pt 112 30)))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 104 -48))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 115 -35))))
+    (portImplementation
+       (name A0
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -26))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 150 10))))
+     (figure device (rectangle (pt 149 9) (pt 151 11))))
+    (portImplementation
+       (name B0
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 121 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 166 -6))))
+      (connectLocation
+       (figure pin (dot (pt 220 0))))
+     (figure device (rectangle (pt 218 -2) (pt 222 2))))
+    (portImplementation
+       (name A1
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -66))))
+      (connectLocation
+       (figure pin (dot (pt 0 -60))))
+     (figure device (rectangle (pt -2 -62) (pt 2 -58))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 150 -10))))
+     (figure device (rectangle (pt 149 -11) (pt 151 -9))))
+   ))))
+
+(cell OAI21X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port A0 (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port A1 (direction INPUT))
+   (port VSS (direction INOUT))
+   (port B0 (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -60) (pt 200 35)))
+     (figure device (path (pointList
+       (pt 100 20) (pt 0 20))))
+     (figure device (circle (pt 185 0) (pt 175 0)))
+     (figure device (path (pointList
+       (pt 100 30) (pt 145 30))))
+     (figure device (path (pointList
+       (pt 100 -30) (pt 100 30))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 145 -30) (pt 175 0) (pt 145 30)))))
+     (figure device (path (pointList
+       (pt 145 -30) (pt 100 -30))))
+     (figure device (path (pointList
+       (pt 21 -50) (pt 0 -50))))
+     (figure device (path (pointList
+       (pt 21 -10) (pt 0 -10))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 17 -60) (pt 25 -30) (pt 17 0)))))
+     (figure device (path (pointList
+       (pt 49 -60) (pt 17 -60))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 100 -30) (pt 79 -8) (pt 49 0)))))
+     (figure device (path (pointList
+       (pt 49 0) (pt 17 0))))
+     (figure device (path (pointList
+       (pt 10 -5) (pt 10 -15))))
+     (figure device
+     (openshape
+        (curve
+           (arc (pt 49 -60) (pt 79 -52) (pt 100 -30)))))
+     (figure device (path (pointList
+       (pt 185 0) (pt 200 0))))
+     (figure device (path (pointList
+       (pt 90 25) (pt 90 15))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 94 -48))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 105 -35))))
+    (portImplementation
+       (name B0
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 102 14))))
+      (connectLocation
+       (figure pin (dot (pt 0 20))))
+     (figure device (rectangle (pt -2 18) (pt 2 22))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 130 -10))))
+     (figure device (rectangle (pt 129 -11) (pt 131 -9))))
+    (portImplementation
+       (name A1
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 -56))))
+      (connectLocation
+       (figure pin (dot (pt 0 -50))))
+     (figure device (rectangle (pt -2 -52) (pt 2 -48))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 157 -5))))
+      (connectLocation
+       (figure pin (dot (pt 200 0))))
+     (figure device (rectangle (pt 198 -2) (pt 202 2))))
+    (portImplementation
+       (name A0
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 26 -16))))
+      (connectLocation
+       (figure pin (dot (pt 0 -10))))
+     (figure device (rectangle (pt -2 -12) (pt 2 -8))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 130 10))))
+     (figure device (rectangle (pt 129 9) (pt 131 11))))
+   ))))
+
+(cell DFFDX1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port D (direction INPUT))
+   (port CK (direction INPUT))
+   (port Q (direction OUTPUT))
+   (port QN (direction OUTPUT))
+   (port VDD (direction INPUT))
+   (port VSS (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+   (symbol
+   (boundingBox (rectangle (pt 40 -160) (pt 240 20)))
+     (keywordDisplay cell
+    	(display (figureGroupOverride device (textHeight 10))
+    	(justify CENTERCENTER)
+    	(orientation R0)
+    	(origin (pt 205 -115))))
+     (keywordDisplay instance
+    	(display (figureGroupOverride instance (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 160 -10))))
+     (figure device (rectangle (pt 80 -140) (pt 200 0)))
+     (figure device (path (pointList
+    	 (pt 140 -160) (pt 140 -140))))
+     (figure device (path (pointList
+    	 (pt 140 20) (pt 140 0))))
+     (figure device (path (pointList
+    	 (pt 240 -50) (pt 200 -50))))
+     (figure device (path (pointList
+    	 (pt 240 -90) (pt 200 -90))))
+     (figure device (path (pointList
+    	 (pt 40 -30) (pt 80 -30))))
+     (figure device (path (pointList
+    	 (pt 40 -50) (pt 80 -50))))
+     (figure device (path (pointList
+    	 (pt 40 -70) (pt 80 -70))))
+     (figure device (path (pointList
+    	 (pt 40 -90) (pt 80 -90))))
+     (figure device (path (pointList
+    	 (pt 40 -110) (pt 80 -110))))
+    (portImplementation
+    	 (name VSS
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERRIGHT)
+    	(orientation R0)
+    	(origin (pt 154 -130))))
+    	(connectLocation
+    	 (figure pin (dot (pt 140 -160))))
+     (figure device (rectangle (pt 136 -164) (pt 144 -156))))
+    (portImplementation
+    	 (name VDD
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 126 -10))))
+    	(connectLocation
+    	 (figure pin (dot (pt 140 20))))
+     (figure device (rectangle (pt 136 16) (pt 144 24))))
+    (portImplementation
+    	 (name QN
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERRIGHT)
+    	(orientation R0)
+    	(origin (pt 194 -90))))
+    	(connectLocation
+    	 (figure pin (dot (pt 240 -90))))
+     (figure device (rectangle (pt 236 -94) (pt 244 -86))))
+    (portImplementation
+    	 (name Q
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERRIGHT)
+    	(orientation R0)
+    	(origin (pt 194 -50))))
+    	(connectLocation
+    	 (figure pin (dot (pt 240 -50))))
+     (figure device (rectangle (pt 236 -54) (pt 244 -46))))
+    (portImplementation
+    	 (name CK
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 86 -30))))
+    	(connectLocation
+    	 (figure pin (dot (pt 40 -30))))
+     (figure device (rectangle (pt 36 -34) (pt 44 -26))))
+    (portImplementation
+    	 (name D
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 86 -50))))
+    	(connectLocation
+    	 (figure pin (dot (pt 40 -50))))
+     (figure device (rectangle (pt 36 -54) (pt 44 -46))))
+    ))))
+
+(cell DFFDRX1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port RN (direction INPUT))
+   (port D (direction INPUT))
+   (port CK (direction INPUT))
+   (port Q (direction OUTPUT))
+   (port QN (direction OUTPUT))
+   (port VDD (direction INPUT))
+   (port VSS (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+   (symbol
+   (boundingBox (rectangle (pt 40 -160) (pt 240 20)))
+     (keywordDisplay cell
+    	(display (figureGroupOverride device (textHeight 10))
+    	(justify CENTERCENTER)
+    	(orientation R0)
+    	(origin (pt 205 -115))))
+     (keywordDisplay instance
+    	(display (figureGroupOverride instance (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 160 -10))))
+     (figure device (rectangle (pt 80 -140) (pt 200 0)))
+     (figure device (path (pointList
+    	 (pt 140 -160) (pt 140 -140))))
+     (figure device (path (pointList
+    	 (pt 140 20) (pt 140 0))))
+     (figure device (path (pointList
+    	 (pt 240 -50) (pt 200 -50))))
+     (figure device (path (pointList
+    	 (pt 240 -90) (pt 200 -90))))
+     (figure device (path (pointList
+    	 (pt 40 -30) (pt 80 -30))))
+     (figure device (path (pointList
+    	 (pt 40 -50) (pt 80 -50))))
+     (figure device (path (pointList
+    	 (pt 40 -70) (pt 80 -70))))
+     (figure device (path (pointList
+    	 (pt 40 -90) (pt 80 -90))))
+     (figure device (path (pointList
+    	 (pt 40 -110) (pt 80 -110))))
+    (portImplementation
+    	 (name VSS
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERRIGHT)
+    	(orientation R0)
+    	(origin (pt 154 -130))))
+    	(connectLocation
+    	 (figure pin (dot (pt 140 -160))))
+     (figure device (rectangle (pt 136 -164) (pt 144 -156))))
+    (portImplementation
+    	 (name VDD
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 126 -10))))
+    	(connectLocation
+    	 (figure pin (dot (pt 140 20))))
+     (figure device (rectangle (pt 136 16) (pt 144 24))))
+    (portImplementation
+    	 (name QN
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERRIGHT)
+    	(orientation R0)
+    	(origin (pt 194 -90))))
+    	(connectLocation
+    	 (figure pin (dot (pt 240 -90))))
+     (figure device (rectangle (pt 236 -94) (pt 244 -86))))
+    (portImplementation
+    	 (name Q
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERRIGHT)
+    	(orientation R0)
+    	(origin (pt 194 -50))))
+    	(connectLocation
+    	 (figure pin (dot (pt 240 -50))))
+     (figure device (rectangle (pt 236 -54) (pt 244 -46))))
+    (portImplementation
+    	 (name CK
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 86 -30))))
+    	(connectLocation
+    	 (figure pin (dot (pt 40 -30))))
+     (figure device (rectangle (pt 36 -34) (pt 44 -26))))
+    (portImplementation
+    	 (name D
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 86 -50))))
+    	(connectLocation
+    	 (figure pin (dot (pt 40 -50))))
+     (figure device (rectangle (pt 36 -54) (pt 44 -46))))
+    (portImplementation
+    	 (name RN
+    	(display (figureGroupOverride pin (textHeight 10))
+    	(justify CENTERLEFT)
+    	(orientation R0)
+    	(origin (pt 86 -70))))
+    	(connectLocation
+    	 (figure pin (dot (pt 40 -70))))
+     (figure device (rectangle (pt 36 -74) (pt 44 -66))))
+    ))))
+
+(cell TLATNCAX2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VSS (direction INOUT))
+   (port VDD (direction INOUT))
+   (port CK (direction INPUT))
+   (port ECK (direction OUTPUT))
+   (port E (direction INPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -70) (pt 120 25)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 20 -52))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 19 14))))
+     (figure device (path (pointList
+       (pt 10 -40) (pt 0 -40))))
+     (figure device (path (pointList
+       (pt 120 0) (pt 100 0))))
+     (figure device (circle (pt 20 -40) (pt 10 -40)))
+     (figure device (path (pointList
+       (pt 20 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 20 -20) (pt 0 -20))))
+     (figure device (rectangle (pt 20 -50) (pt 100 10)))
+    (portImplementation
+       (name E
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -24))))
+      (connectLocation
+       (figure pin (dot (pt 0 -20))))
+     (figure device (rectangle (pt -2 -22) (pt 2 -18))))
+    (portImplementation
+       (name ECK
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 70 -4))))
+      (connectLocation
+       (figure pin (dot (pt 120 0))))
+     (figure device (rectangle (pt 118 -2) (pt 122 2))))
+    (portImplementation
+       (name CK
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 21 -4))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 -10))))
+     (figure device (rectangle (pt 59 -11) (pt 61 -9))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 -30))))
+     (figure device (rectangle (pt 59 -31) (pt 61 -29))))
+   ))))
+
+(cell DLYX0P2 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port A (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 49 -7))))
+     (figure device (path (pointList
+       (pt 64 0) (pt 21 -25))))
+     (figure device (path (pointList
+       (pt 21 -25) (pt 21 25))))
+     (figure device (path (pointList
+       (pt 64 0) (pt 100 0))))
+     (figure device (path (pointList
+       (pt 21 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 64 0) (pt 21 25))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 49 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 -10))))
+     (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 10))))
+     (figure device (rectangle (pt 29 9) (pt 31 11))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 46 -4))))
+      (connectLocation
+       (figure pin (dot (pt 100 0))))
+     (figure device (rectangle (pt 98 -2) (pt 102 2))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 22 -4))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    ))))
+
+(cell DLYX1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port A (direction INPUT))
+   (port Y (direction OUTPUT))
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 -30) (pt 100 30)))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 49 -7))))
+     (figure device (path (pointList
+       (pt 64 0) (pt 21 -25))))
+     (figure device (path (pointList
+       (pt 21 -25) (pt 21 25))))
+     (figure device (path (pointList
+       (pt 64 0) (pt 100 0))))
+     (figure device (path (pointList
+       (pt 21 0) (pt 0 0))))
+     (figure device (path (pointList
+       (pt 64 0) (pt 21 25))))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 49 11))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 -10))))
+     (figure device (rectangle (pt 29 -11) (pt 31 -9))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 10))))
+     (figure device (rectangle (pt 29 9) (pt 31 11))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 46 -4))))
+      (connectLocation
+       (figure pin (dot (pt 100 0))))
+     (figure device (rectangle (pt 98 -2) (pt 102 2))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 22 -4))))
+      (connectLocation
+       (figure pin (dot (pt 0 0))))
+     (figure device (rectangle (pt -2 -2) (pt 2 2))))
+    ))))
+
+(cell MAJ3X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port C (direction INPUT))
+   (port VDD (direction INOUT))
+   (port B (direction INPUT))
+   (port VSS (direction INOUT))
+   (port A (direction INPUT))
+   (port Y (direction OUTPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 0) (pt 140 220)))
+     (commentGraphics (annotate (stringDisplay "[@info]"
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 0 130))))))
+     (figure device (path (pointList
+       (pt 30 110) (pt 0 110))))
+     (figure device (rectangle (pt 30 30) (pt 110 190)))
+     (figure device (path (pointList
+       (pt 120 150) (pt 140 150))))
+     (figure device (path (pointList
+       (pt 0 150) (pt 30 150))))
+     (figure device (circle (pt 120 150) (pt 110 150)))
+     (figure device (path (pointList
+       (pt 0 70) (pt 30 70))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 80 150))))
+      (connectLocation
+       (figure pin (dot (pt 140 150))))
+     (figure device (rectangle (pt 136 146) (pt 144 154))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 30 150))))
+      (connectLocation
+       (figure pin (dot (pt 0 150))))
+     (figure device (rectangle (pt -4 146) (pt 4 154))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 100))))
+     (figure device (rectangle (pt 59 99) (pt 61 101))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 30 110))))
+      (connectLocation
+       (figure pin (dot (pt 0 110))))
+     (figure device (rectangle (pt -4 106) (pt 4 114))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 120))))
+     (figure device (rectangle (pt 59 119) (pt 61 121))))
+    (portImplementation
+       (name C
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 30 70))))
+      (connectLocation
+       (figure pin (dot (pt 0 70))))
+     (figure device (rectangle (pt -4 66) (pt 4 74))))
+   ))))
+
+(cell NMAJ3X1 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port C (direction INPUT))
+   (port VDD (direction INOUT))
+   (port B (direction INPUT))
+   (port VSS (direction INOUT))
+   (port A (direction INPUT))
+   (port Y (direction OUTPUT))
+  (property (rename pin_35_ "pin#") (integer 18) (owner "Cadence"))
+     (symbol
+   (boundingBox (rectangle (pt 0 0) (pt 140 220)))
+     (commentGraphics (annotate (stringDisplay "[@info]"
+      (display (figureGroupOverride instance (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 0 130))))))
+     (figure device (path (pointList
+       (pt 30 110) (pt 0 110))))
+     (figure device (rectangle (pt 30 30) (pt 110 190)))
+     (figure device (path (pointList
+       (pt 120 150) (pt 140 150))))
+     (figure device (path (pointList
+       (pt 0 150) (pt 30 150))))
+     (figure device (circle (pt 120 150) (pt 110 150)))
+     (figure device (path (pointList
+       (pt 0 70) (pt 30 70))))
+    (portImplementation
+       (name Y
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 80 150))))
+      (connectLocation
+       (figure pin (dot (pt 140 150))))
+     (figure device (rectangle (pt 136 146) (pt 144 154))))
+    (portImplementation
+       (name A
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 30 150))))
+      (connectLocation
+       (figure pin (dot (pt 0 150))))
+     (figure device (rectangle (pt -4 146) (pt 4 154))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 60 100))))
+     (figure device (rectangle (pt 59 99) (pt 61 101))))
+    (portImplementation
+       (name B
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 30 110))))
+      (connectLocation
+       (figure pin (dot (pt 0 110))))
+     (figure device (rectangle (pt -4 106) (pt 4 114))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 60 120))))
+     (figure device (rectangle (pt 59 119) (pt 61 121))))
+    (portImplementation
+       (name C
+      (display (figureGroupOverride pin (textHeight 10))
+      (justify CENTERLEFT)
+      (orientation R0)
+      (origin (pt 30 70))))
+      (connectLocation
+       (figure pin (dot (pt 0 70))))
+     (figure device (rectangle (pt -4 66) (pt 4 74))))
+   ))))
+
+(cell FDCAP6 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+   (symbol
+   (boundingBox (rectangle (pt 0 -20) (pt 60 80)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 8))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 0 63))))
+     (figure device (path (pointList
+       (pt 40 25) (pt 20 25))))
+     (figure device (path (pointList
+       (pt 20 35) (pt 40 35))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 35))))
+     (figure device (rectangle (pt 0 0) (pt 60 60)))
+     (figure device (path (pointList
+       (pt 30 25) (pt 30 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 8))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 0 -2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 20))))
+     (figure device (rectangle (pt 29 19) (pt 31 21))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 40))))
+     (figure device (rectangle (pt 29 39) (pt 31 41))))
+    ))))
+
+(cell FDCAP9 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+   (symbol
+   (boundingBox (rectangle (pt 0 -20) (pt 60 80)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 8))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 0 63))))
+     (figure device (path (pointList
+       (pt 40 25) (pt 20 25))))
+     (figure device (path (pointList
+       (pt 20 35) (pt 40 35))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 35))))
+     (figure device (rectangle (pt 0 0) (pt 60 60)))
+     (figure device (path (pointList
+       (pt 30 25) (pt 30 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 8))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 0 -2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 20))))
+     (figure device (rectangle (pt 29 19) (pt 31 21))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 40))))
+     (figure device (rectangle (pt 29 39) (pt 31 41))))
+    ))))
+
+(cell FDCAP12 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+   (symbol
+   (boundingBox (rectangle (pt 0 -20) (pt 60 80)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 8))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 0 63))))
+     (figure device (path (pointList
+       (pt 40 25) (pt 20 25))))
+     (figure device (path (pointList
+       (pt 20 35) (pt 40 35))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 35))))
+     (figure device (rectangle (pt 0 0) (pt 60 60)))
+     (figure device (path (pointList
+       (pt 30 25) (pt 30 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 8))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 0 -2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 20))))
+     (figure device (rectangle (pt 29 19) (pt 31 21))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 40))))
+     (figure device (rectangle (pt 29 39) (pt 31 41))))
+    ))))
+
+(cell FDCAP24 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+   (symbol
+   (boundingBox (rectangle (pt 0 -20) (pt 60 80)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 8))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 0 63))))
+     (figure device (path (pointList
+       (pt 40 25) (pt 20 25))))
+     (figure device (path (pointList
+       (pt 20 35) (pt 40 35))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 35))))
+     (figure device (rectangle (pt 0 0) (pt 60 60)))
+     (figure device (path (pointList
+       (pt 30 25) (pt 30 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 8))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 0 -2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 20))))
+     (figure device (rectangle (pt 29 19) (pt 31 21))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 40))))
+     (figure device (rectangle (pt 29 39) (pt 31 41))))
+    ))))
+
+(cell FDCAP48 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+   (symbol
+   (boundingBox (rectangle (pt 0 -20) (pt 60 80)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 8))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 0 63))))
+     (figure device (path (pointList
+       (pt 40 25) (pt 20 25))))
+     (figure device (path (pointList
+       (pt 20 35) (pt 40 35))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 35))))
+     (figure device (rectangle (pt 0 0) (pt 60 60)))
+     (figure device (path (pointList
+       (pt 30 25) (pt 30 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 8))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 0 -2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 20))))
+     (figure device (rectangle (pt 29 19) (pt 31 21))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 40))))
+     (figure device (rectangle (pt 29 39) (pt 31 41))))
+    ))))
+
+(cell FDCAP96 (cellType GENERIC)
+ (view symbol (viewType SCHEMATIC)
+  (interface
+   (port VDD (direction INOUT))
+   (port VSS (direction INOUT))
+   (symbol
+   (boundingBox (rectangle (pt 0 -20) (pt 60 80)))
+     (keywordDisplay cell
+      (display (figureGroupOverride device (textHeight 8))
+      (justify LOWERLEFT)
+      (orientation R0)
+      (origin (pt 0 63))))
+     (figure device (path (pointList
+       (pt 40 25) (pt 20 25))))
+     (figure device (path (pointList
+       (pt 20 35) (pt 40 35))))
+     (figure device (path (pointList
+       (pt 30 40) (pt 30 35))))
+     (figure device (rectangle (pt 0 0) (pt 60 60)))
+     (figure device (path (pointList
+       (pt 30 25) (pt 30 20))))
+     (keywordDisplay instance
+      (display (figureGroupOverride instance (textHeight 8))
+      (justify UPPERLEFT)
+      (orientation R0)
+      (origin (pt 0 -2))))
+    (portImplementation VSS
+      (connectLocation
+       (figure pin (dot (pt 30 20))))
+     (figure device (rectangle (pt 29 19) (pt 31 21))))
+    (portImplementation VDD
+      (connectLocation
+       (figure pin (dot (pt 30 40))))
+     (figure device (rectangle (pt 29 39) (pt 31 41))))
+    ))))
+
+     )
+ )

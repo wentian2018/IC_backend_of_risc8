@@ -1,0 +1,9 @@
+The procedures provided in this directory are provided with no expressed guarantees.
+Use at your own risk!
+
+
+To use the view.tk script, it is necessary to install "wish" (wiDGET shELL). This is the main
+executable in the Tk package, that is freely available at www.scriptics.com.
+Make sure you install at least version 8.0.
+
+Once you have installed the Tk package, add the bin location to your PATH environment variable.

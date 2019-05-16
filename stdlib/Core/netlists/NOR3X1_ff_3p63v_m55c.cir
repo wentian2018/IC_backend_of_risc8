@@ -1,0 +1,53 @@
+* File: rcx_out.net
+* Created: Tue Mar 26 09:45:51 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* 
+* 
+* .include "rcx_out.net.pex"
+* BEGIN of "./rcx_out.net.pex"
+* File: rcx_out.net.pex
+* Created: Tue Mar 26 09:45:51 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* Nominal Temperature: 27C
+* Circuit Temperature: 27C
+* 
+
+* END of "./rcx_out.net.pex"
+* 
+.subckt NOR3X1  A B C VDD VSS Y
+* 
+XM4/X1 Y C net010 VDD pch_5_mac_egl4 A=7.5e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.53e-12 PS=1.62457e-05
++ AD=1.47827e-11 PD=4.40288e-05
+XM2/X1 net010 B net012 VDD pch_5_mac_egl4 A=7.5e-06 B=7.4e-07 D=1e-07 H=5e-07
++ NF=1 POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.53e-12 PS=1.62457e-05
++ AD=1.47827e-11 PD=4.40288e-05
+XM1/X1 net012 A VDD VDD pch_5_mac_egl4 A=7.5e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.53e-12 PS=1.62457e-05
++ AD=1.45965e-11 PD=4.39888e-05
+XM5/X1 Y C VSS VSS nch_5_mac_egl4 A=7.4e-07 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.276e-13 PS=2.72569e-06
++ AD=5.1835e-12 PD=1.69888e-05
+XM3/X1 Y B VSS VSS nch_5_mac_egl4 A=7.4e-07 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.276e-13 PS=2.72569e-06
++ AD=5.1835e-12 PD=1.69888e-05
+XM0/X1 Y A VSS VSS nch_5_mac_egl4 A=7.4e-07 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.276e-13 PS=2.72569e-06
++ AD=5.1325e-12 PD=1.69488e-05
+*
+* 
+* .include "rcx_out.net.NOR3X1.pxi"
+* BEGIN of "./rcx_out.net.NOR3X1.pxi"
+* File: rcx_out.net.NOR3X1.pxi
+* Created: Tue Mar 26 09:45:51 2019
+* 
+
+* END of "./rcx_out.net.NOR3X1.pxi"
+* 
+*
+.ends
+*
+*
+

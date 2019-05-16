@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : resources
+Design : cpu
+Version: K-2015.06
+Date   : Thu May 16 13:05:54 2019
+****************************************
+
+
+Resource Report for this hierarchy in file ../../rtl/cpu.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_3        | DW01_inc       | width=2    | add_256 (cpu.v:256)        |
+| eq_x_5         | DW_cmp         | width=2    | eq_266 (cpu.v:266)         |
+| add_x_31       | DW01_inc       | width=8    | add_674 (cpu.v:674)        |
+| add_x_55       | DW01_inc       | width=11   | add_858 (cpu.v:858)        |
+| eq_x_68        | DW_cmp         | width=2    | eq_257 (cpu.v:257)         |
+|                |                |            | eq_265 (cpu.v:265)         |
+| add_x_24       | DW01_inc       | width=8    | add_652 (cpu.v:652)        |
+|                |                |            | add_653_S2 (cpu.v:653)     |
+|                |                |            | add_654_S2 (cpu.v:654)     |
+|                |                |            | add_655_S2 (cpu.v:655)     |
+|                |                |            | add_656_S2 (cpu.v:656)     |
+|                |                |            | add_657_S2 (cpu.v:657)     |
+|                |                |            | add_658_S2 (cpu.v:658)     |
+|                |                |            | add_659_S2 (cpu.v:659)     |
+|                |                |            | add_660_S2 (cpu.v:660)     |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_3            | DW01_inc         | apparch (area)     |                |
+| eq_x_5             | DW_cmp           | apparch (area)     |                |
+| add_x_31           | DW01_inc         | apparch (area)     |                |
+| add_x_55           | DW01_inc         | apparch (area)     |                |
+| eq_x_68            | DW_cmp           | apparch (area)     |                |
+| add_x_24           | DW01_inc         | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : idec
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : alu
+****************************************
+
+Resource Report for this hierarchy in file ../../rtl/alu.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_1        | DW01_add       | width=9    | add_58 (alu.v:58)          |
+| sub_x_2        | DW01_sub       | width=9    | sub_59 (alu.v:59)          |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_1            | DW01_add         | pparch (area,speed)                 |
+| sub_x_2            | DW01_sub         | pparch (area,speed)                 |
+===============================================================================
+
+ 
+****************************************
+Design : regs
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : dram
+****************************************
+
+No implementations to report
+1

@@ -1,0 +1,240 @@
+#!/bin/sh 
+# \
+exec wish "$0" "$@"
+
+#
+# Or change to this: #!/usr/local/bin/wish8.0
+#
+
+# 2010.02.15 amins
+# Search window now integrated in main window, and replaces standard buttons
+# Added "Next/Prev Tag" functionality
+# Added following keyboard shortcuts:
+#   control-f     display search dialog
+#   esc           close search dialog
+#   control-n     jump to next occurrence
+#   control-p     jump to previous occurrence
+#   control-s     save content
+#   control-x     exit (close main window)
+#
+#
+# 2007.10.11 amins
+# Added tagging/search functionality
+# The search dialog uses regular expressions as input
+# You can also select text, then tag all text that matches the selection
+#
+# 2003.10.20 amins
+# Added save_as functionality
+# Font selection made more general
+# Better handling of temporary files
+
+
+set myfont(cr)   {-*-screen-medium-*-*-*-12-*-*-*-*-*-*-*}
+set myfont(bf)   {-*-application-bold-*-*-*-12-*-*-*-*-*-*-*}
+
+if {$argc < 1} { puts "Please provide a file to view"; exit }
+set tmpfile [lindex $argv 0]
+if {$argc > 1} {
+	set command [lindex $argv 1]
+} else {
+	set command $tmpfile
+}
+set delete_tmp 0
+if {$argc > 2} {
+	if {[string tolower [lindex $argv 2]] == "true" || [lindex $argv 2] == 1} {
+		set delete_tmp 1
+	}
+}
+
+set mysearchtext ""
+set search_current_line 0
+set search_current_pos 0.0
+
+# Procedure to save the displayed content:
+# content: list, where every list element is going to be saved as one line
+proc save_as {content} {
+
+	#   Type names		Extension(s)
+	#
+	#---------------------------------------------------------
+	set types {
+		{"Text files"		{.txt .doc}	}
+		{"All files"		*}
+	}
+	set file [tk_getSaveFile -filetypes $types -parent . \
+			-initialfile Untitled]
+	
+	if {$file != ""} {
+		# Save contents to a file:
+		set FILE [open $file w]
+		foreach line $content {
+		puts $FILE $line
+		}
+		close $FILE;
+		#puts "\nview.tk Window content saved as $file\n"
+	}
+}
+
+proc TagSelection {} {
+	set a ""
+	catch {set a [selection get]}
+	if {$a != ""} { TagAll $a }
+}
+
+proc TagAll {searchtext} {
+	global mysearchtext
+	global search_current_line
+	global search_current_pos
+	
+	set mysearchtext $searchtext
+	set found 0
+	scan [.text index end] %d nl
+	# Search the text line by line
+	for {set i 1} {$i < $nl} {incr i} {
+		set pos $i.0
+		set lastpos [.text index $i.end]
+	
+		# Scan the entire line until the end
+		while {$pos < $lastpos} {
+			set pos [.text search -forwards -count match_len -regexp $searchtext $pos $i.end]
+			if {$pos != ""} {
+				if {$found == 0} {
+					set found 1
+					.text see $pos
+					set search_current_pos $pos
+					set search_current_line $i
+				}
+				scan $pos "%d.%d" line char
+				set endpos $i.[expr $char + $match_len]
+				set match [.text get $pos $endpos]
+				.text tag add $match $pos $endpos
+				.text tag configure $match -background yellow
+				set pos $endpos
+			} else {
+				break
+			}
+		}
+	}
+	
+	if {$found == 0} {
+		tk_messageBox -parent . -type ok -message "The pattern \"$searchtext\" was not found."
+	}
+}
+
+proc FindNext {} {
+	global mysearchtext
+	global search_current_line
+	global search_current_pos
+
+	set pos [lindex [.text tag nextrange $mysearchtext [expr $search_current_line + 1].0] 0]
+	if {$pos != ""} {
+		set search_current_line [lindex [split $pos "."] 0]
+		.text see $pos
+	}
+}
+
+proc FindPrev {} {
+	global mysearchtext
+	global search_current_line
+	global search_current_pos
+
+	set pos [lindex [.text tag prevrange $mysearchtext ${search_current_line}.0] 0]
+	if {$pos != ""} {
+		set search_current_line [lindex [split $pos "."] 0]
+		.text see $pos
+	}
+}
+
+proc DelAllTags {} {
+	global mysearchtext
+	set mysearchtext ""
+	
+	foreach tag [.text tag names] {
+		.text tag remove $tag 1.0 end
+	}
+	
+}
+
+
+# Build the interface
+wm title . "$command"
+tk_setPalette grey85
+
+proc create_normal_buttons {{p ""}} {
+	global myfont
+	
+	if {! [catch {pack info $p.buttons.tagsel}]} { return }
+	
+	catch {
+		foreach b {label entry tagall prevtag nexttag deltags dismiss} {
+			destroy $p.buttons.$b
+		}
+	}
+	
+	button $p.buttons.dismiss -fg red -font $myfont(bf) -relief groove -text "Close Window" -command "exit" -bd 1
+	button $p.buttons.search -fg blue -font $myfont(bf) -relief groove -text "RE Search..." -command "create_search_buttons $p" -bd 1
+	button $p.buttons.tagsel -fg blue -font $myfont(bf) -relief groove -text "Tag Selection" -command "TagSelection" -bd 1
+	button $p.buttons.prevtag -fg blue -font $myfont(bf) -relief groove -text "<" -command "FindPrev" -bd 1
+	button $p.buttons.nexttag -fg blue -font $myfont(bf) -relief groove -text ">" -command "FindNext" -bd 1
+	button $p.buttons.deltags -fg blue -font $myfont(bf) -relief groove -text "Remove Tags" -command "DelAllTags" -bd 1
+	button $p.buttons.saveas -font $myfont(bf) -relief groove -text "Save As..." -command {save_as $content} -bd 1
+	pack $p.buttons.dismiss $p.buttons.search $p.buttons.tagsel $p.buttons.prevtag $p.buttons.nexttag \
+		$p.buttons.deltags $p.buttons.saveas -fill x -side left -expand yes -padx 5
+}
+proc create_search_buttons {{p ""}} {
+	global myfont
+	
+	if {! [catch {pack info $p.buttons.tagall}]} { return }
+	
+	catch {
+		foreach b {dismiss search tagsel prevtag nexttag deltags saveas} {
+			destroy $p.buttons.$b
+		}
+	}
+	
+	label $p.buttons.label -font $myfont(bf) -text "RegExp Search:  "
+	entry $p.buttons.entry -width 19 -bd 1 -textvariable searchtext
+	button $p.buttons.tagall -text "Tag" -command {TagAll $searchtext} -font $myfont(bf) -relief groove -bd 1
+	button $p.buttons.prevtag -font $myfont(bf) -relief groove -text "<" -command "FindPrev" -bd 1
+	button $p.buttons.nexttag -font $myfont(bf) -relief groove -text ">" -command "FindNext" -bd 1
+	button $p.buttons.deltags -font $myfont(bf) -relief groove -text "Remove Tags" -command "DelAllTags" -bd 1
+	button $p.buttons.dismiss -fg red -text "Close Search" -command "create_normal_buttons $p" -font $myfont(bf) -relief groove -bd 1
+		
+	pack $p.buttons.label $p.buttons.entry $p.buttons.tagall $p.buttons.prevtag $p.buttons.nexttag \
+		$p.buttons.deltags $p.buttons.dismiss -fill x -side left -expand yes -padx 5
+	
+	focus $p.buttons.entry
+}
+
+
+set p ""
+frame $p.buttons
+pack $p.buttons -side bottom -pady 1m
+create_normal_buttons $p
+
+text .text -font $myfont(cr) -relief sunken -bd 1 -bg grey80 -yscrollcommand ".scroll set" \
+	-setgrid 1 -height 45
+scrollbar .scroll -command ".text yview" -bd 1
+pack .scroll -side right -fill y
+pack .text -expand yes -fill both -padx 3
+
+set TMP [open $tmpfile r]
+while {[gets $TMP line] >= 0} {
+	.text insert end $line\n
+	lappend content $line
+}
+
+bind . "<Control-f>" "create_search_buttons $p"
+#bind . "<Control-t>" TagSelection
+bind . "<Control-n>" FindNext
+bind . "<Control-p>" FindPrev
+bind . "<Key-Escape>" "create_normal_buttons $p"
+bind . "<Control-s>" {save_as $content}
+bind . "<Control-x>" {exit}
+
+# done with the temporary file - close and delete
+close $TMP
+if {$delete_tmp} {
+	file delete $tmpfile
+}
+

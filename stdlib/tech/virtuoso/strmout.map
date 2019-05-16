@@ -1,0 +1,104 @@
+; ========================================================================= 
+;                    Stream In/Out Layer Map for Virtuoso
+;
+; For SMIC 65LL/55LL Logic 1.2/2.5/3.3V Process
+; Metal option: 1P9M_8Ic_1TMc_ALPA1
+; 
+; Reference technology documents:
+;   1. Design Rule:       TD-LO55-DR-2002     rev. 5
+;   2. SPICE Model:       TD-LO55-SP-2002     rev. 4
+; 
+; Copyright (c) 2016-2018 Cogenda Pte Ltd
+; 
+; All rights reserved
+; 
+; ========================================================================= 
+;               name             purpose   layer number      data type
+                  AA             drawing             10              0
+                  NW             drawing             14              0
+                 DNW             drawing             19              0
+                 DNW                 res             19              2
+                  PW             drawing             20              0
+                LOGO             drawing             26              0
+                  DG             drawing             29              0
+                  GT             drawing             30              0
+                 HRP             drawing             39              0
+                  SN             drawing             40              0
+                ESD1             drawing             41              0
+                  SP             drawing             43              0
+                 MVP             drawing             44              0
+                 MVN             drawing             45              0
+                VTPH             drawing             46              0
+                VTNH             drawing             47              0
+                 SAB             drawing             48              0
+                  CT             drawing             50              0
+                INST             drawing             60              0
+                  M1             drawing             61              0
+                  V1             drawing             70              0
+                  M2             drawing             62              0
+                  V2             drawing             71              0
+                  M3             drawing             63              0
+                  V3             drawing             72              0
+                  M4             drawing             64              0
+                  V4             drawing             73              0
+                  M5             drawing             65              0
+                  V5             drawing             74              0
+                  M6             drawing             66              0
+                  V6             drawing             75              0
+                  M7             drawing             67              0
+                  V7             drawing             76              0
+                  M8             drawing             68              0
+                 TV2             drawing            123              0
+                 TM2             drawing            122              0
+                  PA             drawing             80              0
+                ALPA             drawing             83              0
+                FUSE             drawing             81              0
+              GTFUSE             drawing             81              1
+               EFUSE             drawing             81              2
+                ALPA                 res             83              1
+                ALPA                 txt             83              2
+                PSUB             drawing             85              0
+               DUMBM             drawing             90              0
+               DUMBA             drawing             91              0
+               DUMBP             drawing             92              0
+              VARMOS             drawing             93              0
+              VARJUN             drawing             94              0
+               RESNW             drawing             95              0
+               RESP1             drawing             96              0
+               RESAA             drawing             97              0
+               OPCBA             drawing            100              0
+               OPCBP             drawing            101              0
+               OPCBM             drawing            102              0
+                 LVP             drawing            218              0
+                 LVN             drawing            219              0
+                  TG             drawing            125              0
+              OVERPL             drawing            125              4
+              UNDEPL             drawing            125              5
+              BORDER             drawing            127              0
+                  MD             drawing            130              0
+                SUBD             drawing            131              1
+              MOSCKT             drawing            131              2
+              ESDIO1             drawing            133              0
+               CAPBP             drawing            137              0
+               DMMFC             drawing            137              1
+                DSTR             drawing            138              0
+                DCTY             drawing            139              0
+                BCB1             drawing            165              0
+                 RDL             drawing            166              0
+                BCB2             drawing            167              0
+               MnTXT              metal1            141              0
+               MnTXT              metal2            142              0
+               MnTXT              metal3            143              0
+               MnTXT              metal4            144              0
+               MnTXT              metal5            145              0
+               MnTXT              metal6            146              0
+               MnTXT              metal7            147              0
+               MnTXT              metal8            148              0
+               MnTXT           topmetal1            120              3
+               MnTXT           topmetal2            122              3
+               MnTXT           topmetal3            228              3
+               MnTXT           topmetal4            229              3
+             EXlayer                 dfm            239              1
+                VSIA             drawing             63             63
+               RP184             drawing            184              0
+               RP185             drawing            185              0

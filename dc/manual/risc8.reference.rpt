@@ -1,0 +1,1014 @@
+ 
+****************************************
+Report : reference
+Design : cpu
+Version: K-2015.06
+Date   : Thu May 16 13:04:59 2019
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SNPS_CLOCK_GATE_HIGH_cpu_0        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_1        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_2        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_3        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_4        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_5        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_6        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_7        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_8        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_9        4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_10       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_cpu_11       4.750000       1      4.750000  b, h
+alu                             386.250000       1    386.250000  h
+an02d1             cb13fs120_tsmc_max     1.250000      51    63.750000
+an02d2             cb13fs120_tsmc_max     1.500000       1     1.500000
+an03d2             cb13fs120_tsmc_max     2.000000       1     2.000000
+aoi211d1           cb13fs120_tsmc_max     2.500000       2     5.000000
+aoim22d1           cb13fs120_tsmc_max     2.250000       7    15.750000
+aon211d1           cb13fs120_tsmc_max     2.500000       2     5.000000
+aor21d1            cb13fs120_tsmc_max     2.000000      10    20.000000
+aor22d1            cb13fs120_tsmc_max     2.250000      18    40.500000
+aor31d1            cb13fs120_tsmc_max     2.000000       5    10.000000
+aor211d1           cb13fs120_tsmc_max     2.000000      13    26.000000
+aor222d1           cb13fs120_tsmc_max     3.250000       2     6.500000
+bufbd3             cb13fs120_tsmc_max     1.750000       2     3.500000
+bufbd7             cb13fs120_tsmc_max     3.000000       2     6.000000
+buffd1             cb13fs120_tsmc_max     1.000000       3     3.000000
+buffd2             cb13fs120_tsmc_max     1.250000      18    22.500000
+dfnrb1             cb13fs120_tsmc_max     5.500000       1     5.500000 n
+dfnrn1             cb13fs120_tsmc_max     5.250000       3    15.750000 n
+dfnrq1             cb13fs120_tsmc_max     5.250000      99   519.750000 n
+dfnrq2             cb13fs120_tsmc_max     5.500000       4    22.000000 n
+dfnrq4             cb13fs120_tsmc_max     5.750000      11    63.250000 n
+idec                            182.750000       1    182.750000  h
+inv0d0             cb13fs120_tsmc_max     0.750000      85    63.750000
+inv0d1             cb13fs120_tsmc_max     0.750000      30    22.500000
+invbd2             cb13fs120_tsmc_max     1.000000      14    14.000000
+invbd4             cb13fs120_tsmc_max     1.750000       4     7.000000
+invbd7             cb13fs120_tsmc_max     2.250000       5    11.250000
+mx02d0             cb13fs120_tsmc_max     2.000000      19    38.000000
+mx02d1             cb13fs120_tsmc_max     2.250000       1     2.250000
+nd02d0             cb13fs120_tsmc_max     1.000000     190   190.000000
+nd02d1             cb13fs120_tsmc_max     1.000000      56    56.000000
+nd02d2             cb13fs120_tsmc_max     1.750000      23    40.250000
+nd03d0             cb13fs120_tsmc_max     1.250000      27    33.750000
+nd04d0             cb13fs120_tsmc_max     1.750000       5     8.750000
+nd12d0             cb13fs120_tsmc_max     1.250000      15    18.750000
+nd12d1             cb13fs120_tsmc_max     1.500000       6     9.000000
+nr02d0             cb13fs120_tsmc_max     1.000000     128   128.000000
+nr03d0             cb13fs120_tsmc_max     1.250000      15    18.750000
+nr04d0             cb13fs120_tsmc_max     1.500000      12    18.000000
+oai21d1            cb13fs120_tsmc_max     2.250000       1     2.250000
+oai22d1            cb13fs120_tsmc_max     2.750000       1     2.750000
+oan211d1           cb13fs120_tsmc_max     2.500000       3     7.500000
+or02d0             cb13fs120_tsmc_max     1.250000       3     3.750000
+or02d1             cb13fs120_tsmc_max     1.250000       1     1.250000
+ora21d1            cb13fs120_tsmc_max     2.000000       3     6.000000
+ora31d1            cb13fs120_tsmc_max     2.000000       1     2.000000
+ora211d1           cb13fs120_tsmc_max     2.250000       6    13.500000
+regs                           4298.750000       1   4298.750000  b, h, n
+xn02d1             cb13fs120_tsmc_max     2.750000       7    19.250000
+xr02d1             cb13fs120_tsmc_max     2.750000       4    11.000000
+-----------------------------------------------------------------------------
+Total 62 references                                  6531.250000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_cpu_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: alu 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+an02d1             cb13fs120_tsmc_max     1.250000       4     5.000000
+an02d2             cb13fs120_tsmc_max     1.500000       1     1.500000
+an03d1             cb13fs120_tsmc_max     1.750000       1     1.750000
+aoi21d1            cb13fs120_tsmc_max     2.250000       2     4.500000
+aoim22d1           cb13fs120_tsmc_max     2.250000       1     2.250000
+aor22d1            cb13fs120_tsmc_max     2.250000       3     6.750000
+bufbd3             cb13fs120_tsmc_max     1.750000       1     1.750000
+inv0d0             cb13fs120_tsmc_max     0.750000      29    21.750000
+inv0d1             cb13fs120_tsmc_max     0.750000      38    28.500000
+invbd2             cb13fs120_tsmc_max     1.000000       8     8.000000
+mx02d0             cb13fs120_tsmc_max     2.000000      16    32.000000
+nd02d0             cb13fs120_tsmc_max     1.000000      56    56.000000
+nd02d1             cb13fs120_tsmc_max     1.000000      60    60.000000
+nd02d2             cb13fs120_tsmc_max     1.750000       9    15.750000
+nd03d0             cb13fs120_tsmc_max     1.250000       1     1.250000
+nd04d0             cb13fs120_tsmc_max     1.750000       1     1.750000
+nd12d0             cb13fs120_tsmc_max     1.250000       5     6.250000
+nd12d1             cb13fs120_tsmc_max     1.500000       5     7.500000
+nr02d0             cb13fs120_tsmc_max     1.000000      55    55.000000
+nr03d0             cb13fs120_tsmc_max     1.250000       3     3.750000
+nr04d0             cb13fs120_tsmc_max     1.500000       6     9.000000
+oai21d1            cb13fs120_tsmc_max     2.250000       4     9.000000
+or02d1             cb13fs120_tsmc_max     1.250000       1     1.250000
+ora21d1            cb13fs120_tsmc_max     2.000000       1     2.000000
+xn02d1             cb13fs120_tsmc_max     2.750000      14    38.500000
+xr02d1             cb13fs120_tsmc_max     2.750000       2     5.500000
+-----------------------------------------------------------------------------
+Total 26 references                                   386.250000
+
+****************************************
+Design: idec 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+an02d1             cb13fs120_tsmc_max     1.250000       2     2.500000
+an02d2             cb13fs120_tsmc_max     1.500000       2     3.000000
+an04d2             cb13fs120_tsmc_max     2.250000       1     2.250000
+aoim22d1           cb13fs120_tsmc_max     2.250000       1     2.250000
+bufbd3             cb13fs120_tsmc_max     1.750000       1     1.750000
+buffd1             cb13fs120_tsmc_max     1.000000       6     6.000000
+buffd2             cb13fs120_tsmc_max     1.250000       5     6.250000
+inv0d0             cb13fs120_tsmc_max     0.750000       9     6.750000
+inv0d1             cb13fs120_tsmc_max     0.750000      10     7.500000
+invbd2             cb13fs120_tsmc_max     1.000000       7     7.000000
+invbd4             cb13fs120_tsmc_max     1.750000       1     1.750000
+invbd7             cb13fs120_tsmc_max     2.250000       1     2.250000
+nd02d0             cb13fs120_tsmc_max     1.000000      20    20.000000
+nd02d1             cb13fs120_tsmc_max     1.000000      20    20.000000
+nd02d2             cb13fs120_tsmc_max     1.750000      15    26.250000
+nd03d0             cb13fs120_tsmc_max     1.250000       9    11.250000
+nd04d0             cb13fs120_tsmc_max     1.750000       1     1.750000
+nd12d0             cb13fs120_tsmc_max     1.250000       5     6.250000
+nd12d1             cb13fs120_tsmc_max     1.500000       4     6.000000
+nr02d0             cb13fs120_tsmc_max     1.000000      30    30.000000
+nr03d0             cb13fs120_tsmc_max     1.250000       6     7.500000
+nr04d0             cb13fs120_tsmc_max     1.500000       3     4.500000
+-----------------------------------------------------------------------------
+Total 22 references                                   182.750000
+
+****************************************
+Design: regs 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+an02d1             cb13fs120_tsmc_max     1.250000       1     1.250000
+an03d1             cb13fs120_tsmc_max     1.750000       1     1.750000
+an12d2             cb13fs120_tsmc_max     2.000000       1     2.000000
+buffd1             cb13fs120_tsmc_max     1.000000       1     1.000000
+dram                           4285.250000       1   4285.250000  b, h, n
+inv0d0             cb13fs120_tsmc_max     0.750000       1     0.750000
+mx02d2             cb13fs120_tsmc_max     2.500000       1     2.500000
+nd02d0             cb13fs120_tsmc_max     1.000000       2     2.000000
+ora211d1           cb13fs120_tsmc_max     2.250000       1     2.250000
+-----------------------------------------------------------------------------
+Total 9 references                                   4298.750000
+
+****************************************
+Design: dram 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SNPS_CLOCK_GATE_HIGH_dram_0       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_1       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_2       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_3       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_4       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_5       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_6       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_7       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_8       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_9       4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_10      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_11      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_12      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_13      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_14      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_15      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_16      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_17      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_18      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_19      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_20      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_21      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_22      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_23      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_24      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_25      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_26      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_27      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_28      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_29      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_30      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_31      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_32      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_33      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_34      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_35      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_36      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_37      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_38      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_39      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_40      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_41      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_42      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_43      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_44      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_45      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_46      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_47      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_48      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_49      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_50      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_51      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_52      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_53      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_54      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_55      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_56      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_57      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_58      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_59      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_60      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_61      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_62      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_63      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_64      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_65      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_66      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_67      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_68      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_69      4.750000       1      4.750000  b, h
+SNPS_CLOCK_GATE_HIGH_dram_70      4.750000       1      4.750000  b, h
+an02d1             cb13fs120_tsmc_max     1.250000       9    11.250000
+an04d1             cb13fs120_tsmc_max     2.000000       1     2.000000
+aor21d1            cb13fs120_tsmc_max     2.000000       8    16.000000
+aor22d1            cb13fs120_tsmc_max     2.250000     272   612.000000
+aor211d1           cb13fs120_tsmc_max     2.000000      16    32.000000
+bufbd3             cb13fs120_tsmc_max     1.750000       2     3.500000
+buffd1             cb13fs120_tsmc_max     1.000000       1     1.000000
+buffd2             cb13fs120_tsmc_max     1.250000      11    13.750000
+dfnrn1             cb13fs120_tsmc_max     5.250000      62   325.500000 n
+dfnrq1             cb13fs120_tsmc_max     5.250000     506  2656.500000 n
+inv0d0             cb13fs120_tsmc_max     0.750000       8     6.000000
+inv0d1             cb13fs120_tsmc_max     0.750000       2     1.500000
+invbd2             cb13fs120_tsmc_max     1.000000       2     2.000000
+nd02d0             cb13fs120_tsmc_max     1.000000       2     2.000000
+nd02d1             cb13fs120_tsmc_max     1.000000      14    14.000000
+nd03d0             cb13fs120_tsmc_max     1.250000       5     6.250000
+nd03d1             cb13fs120_tsmc_max     2.250000       2     4.500000
+nd04d0             cb13fs120_tsmc_max     1.750000      15    26.250000
+nr02d0             cb13fs120_tsmc_max     1.000000     111   111.000000
+nr03d0             cb13fs120_tsmc_max     1.250000       4     5.000000
+nr04d0             cb13fs120_tsmc_max     1.500000      64    96.000000
+-----------------------------------------------------------------------------
+Total 92 references                                  4285.250000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_22 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_23 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_24 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_25 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_26 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_27 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_28 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_29 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_30 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_31 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_33 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_35 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_36 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_37 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_38 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_39 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_40 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_41 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_42 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_43 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_44 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_45 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_46 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_47 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_48 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_49 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_50 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_51 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_52 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_53 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_54 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_55 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_56 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_57 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_58 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_59 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_60 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_61 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_62 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_63 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_65 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_66 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_67 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_68 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_69 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+
+****************************************
+Design: SNPS_CLOCK_GATE_HIGH_dram_70 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+gclrsn1            cb13fs120_tsmc_max     4.750000       1     4.750000 b, d
+-----------------------------------------------------------------------------
+Total 1 references                                      4.750000
+1

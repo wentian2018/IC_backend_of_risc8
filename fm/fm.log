@@ -1,0 +1,195 @@
+
+                            Formality (R)
+                Version K-2015.06-SP1 -- Jul 14, 2015
+              Copyright (c) 1988-2019 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys, Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+  ** Highlights of Formality (R) Version K-2015.06 **
+   - Improved debugging for inconclusive points; analyze_points now reports sources of X for aborted or unverified points
+   - New command to check for over-constrained UPF designs; analyze_upf will report UPF supplies that can never turn on
+   - Faster runtime for gate-to-gate verifications
+   - Improved completion for hard-to-verify designs; three new alternate solver strategies are available
+   - Easier setup for UPF designs requiring isolation/supply constraints; set_constraint now works across hierarchy
+   - New GUI collection manager for advanced debugging and ECO implementation
+
+  ** Highlights of Formality Ultra (R) Version K-2015.06 **
+   - RTL to schematic cross-probing for assistance in ECO implementation and advanced debugging
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 3595661
+Hostname: helium3 (RHEL64)
+Current time: Thu May  9 09:59:06 2019
+
+Loading db file '/opt/synopsys/fm201506/libraries/syn/gtech.db'
+set search_path "$search_path ../rtl"
+ ../rtl
+set synopsys_auto_setup true
+true
+set_svf ../dc/outputs/risc8.svf
+SVF set to '../dc/outputs/risc8.svf'.
+1
+set hdlin_dwroot /opt/synopsys/syn201506 
+/opt/synopsys/syn201506
+########read RTL ###########
+read_verilog -r -vcs "-f ../rtl/syn.vf"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/zhouwt/risc8/rtl/alu.v'
+Loading verilog file '/home/zhouwt/risc8/rtl/cpu.v'
+Loading verilog file '/home/zhouwt/risc8/rtl/dram.v'
+Loading verilog file '/home/zhouwt/risc8/rtl/idec.v'
+Loading verilog file '/home/zhouwt/risc8/rtl/regs.v'
+Current container set to 'r'
+1
+set_top cpu
+Setting top design to 'r:/WORK/cpu'
+Status:   Elaborating design cpu   ...  
+$display output: Too many CALLs!!
+$display output: Too many CALLs!!
+Status:   Elaborating design regs   ...  
+Status:   Elaborating design dram   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: mem Block: /dram File: /home/zhouwt/risc8/rtl/dram.v Line: 79)  (FMR_ELAB-147)
+Status:   Elaborating design alu   ...  
+Status:   Elaborating design idec   ...  
+Status:  Implementing inferred operators...
+Top design set to 'r:/WORK/cpu' with warnings
+   ATTENTION: RTL interpretation messages were produced during link.
+              Verification results may disagree with a logic simulator.
+
+************ RTL Interpretation Summary ************
+************ Design: r:/WORK/cpu
+1 FMR_ELAB-147 message produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+Reference design set to 'r:/WORK/cpu'
+1
+read_db -i ../ref/db/GF21LB004-FB-00000-r5p0-03rel0/arm/cp/cmos28lp/sc9_base_hvt/r5p0/db/sc9_cmos28lp_base_hvt_ff_nominal_min_1p10v_m40c.db
+Loading db file '/home/zhouwt/risc8/ref/db/GF21LB004-FB-00000-r5p0-03rel0/arm/cp/cmos28lp/sc9_base_hvt/r5p0/db/sc9_cmos28lp_base_hvt_ff_nominal_min_1p10v_m40c.db'
+Current container set to 'i'
+1
+########read implementation model########
+read_verilog -i ../dc/run/netlist/risc8.v
+No target library specified, default is WORK
+Loading verilog file '/home/zhouwt/risc8/dc/run/netlist/risc8.v'
+1
+set_top cpu
+Setting top design to 'i:/WORK/cpu'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  242 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/cpu'
+Implementation design set to 'i:/WORK/cpu'
+1
+verify
+Reference design is 'r:/WORK/cpu'
+Implementation design is 'i:/WORK/cpu'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+change_names        :          9          0          0          0          9
+environment         :          4          0          0          0          4
+instance_map        :          4          0          0          0          4
+mark                :          4          0          0          0          4
+reg_constant        :          1          0          0          0          1
+reg_merging         :          1          0          0          0          1
+replace             :          2          0          0          0          2
+ungroup             :          4          0          0          0          4
+
+SVF files read:
+      ../dc/outputs/risc8.svf
+
+SVF files produced:
+  formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 753 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 30 Matched primary inputs, black-box outputs    
+ 16(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 29(2) Unmatched reference(implementation) unread points    
+----------------------------------------------------------------------------------------    
+Unmatched Objects                                                        REF        IMPL    
+----------------------------------------------------------------------------------------    
+ Registers                                                                16           0    
+   DFF                                                                    16           0    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+   ATTENTION: RTL interpretation messages were produced during link
+              of reference design.
+              Verification results may disagree with a logic simulator.
+-----------------------------------------------------------------------
+ Reference design: r:/WORK/cpu
+ Implementation design: i:/WORK/cpu
+ 753 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      83     670       0     753
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+if { [info exists ::env(STARTGUI)] } {
+	start_gui
+} else {
+	quit
+}
+
+Maximum memory usage for this session: 471688 KB
+CPU usage for this session: 13.39 seconds
+Current time: Thu May  9 09:59:19 2019
+Elapsed time: 13 seconds
+
+Thank you for using Formality (R)!

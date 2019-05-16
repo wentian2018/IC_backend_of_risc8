@@ -1,0 +1,15 @@
+
+(edif CADENCE_EDIF
+    (edifVersion 2 0 0)
+    (edifLevel 0)
+    (keywordMap (keywordLevel 0))
+    (library cgd_t025_io
+        (edifLevel 0)
+        (technology
+            (numberDefinition
+                (scale 160 (E 25400 -6) (unit DISTANCE))
+             )
+         )
+
+     )
+ )

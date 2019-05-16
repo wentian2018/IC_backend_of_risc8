@@ -1,0 +1,5 @@
+alu.v
+cpu.v
+dram.v
+idec.v
+regs.v

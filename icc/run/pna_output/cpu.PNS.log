@@ -1,0 +1,21 @@
+
+Name of design : cpu
+Number of cell instance masters in the library : 76
+Number of cell instances in the design : 2947
+Target IR drop : 132.000 mV
+Processing net VDD ...
+Average power dissipation in cpu :   350.00 mW
+Power supply voltage :     1.32 V
+Average current in cpu :   265.15 mA
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 8
+Maximum IR drop in cpu : 91.77 mV
+Maximum current in cpu : 68.414 mA
+Processing net VSS ...
+Average power dissipation in cpu :   350.00 mW
+Power supply voltage :     1.32 V
+Average current in cpu :   265.15 mA
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 8
+Maximum IR drop in cpu : 91.30 mV
+Maximum current in cpu : 72.759 mA
+Memory usage for design data :      37609.472 Kbytes
+Overall takes     0.09 seconds

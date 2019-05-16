@@ -1,0 +1,95 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Suppress known and/or annoying messages
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+suppress_message {TIM-052 OPT-170 PSYN-025 UID-401}
+suppress_message {PSYN-850 PSYN-087 PSYN-040 PSYN-088}
+suppress_message {MWDC-285}
+# check_physical_design/_constraints warnings about layer capacitance variation and placement area
+suppress_message {PSYN-261 PNR-148}
+# place_opt warnings about unannotated nets driven by black-box output, AHFS skipped for disabled 
+# high fanout nets, and unannotated sequential cell outpus
+suppress_message {PWR-415 PWR-416 PSYN-1002}
+# psynopt warning about unannotated black box
+suppress_message {PWR-428}
+# source opt_ctrl.tcl file warning about 1 high fanout net.
+suppress_message {TIM-134}
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Load useful "functions" or procedures, like "view"
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+source ../ref/tools/procs.tcl
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# General useful settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Disable more-like page mode
+set enable_page_mode false
+# Don't want to see CMD-041 when creating new variables
+set sh_new_variable_message false
+# Increase history buffer from 20 commands to 100
+history keep 100
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Enable logging of commands and everything by date/shell
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set timestamp [clock format [clock scan now] -format "%Y-%m-%d_%H-%M"]
+set sh_output_log_file "${synopsys_program_name}.log.[pid].$timestamp"
+set sh_command_log_file "${synopsys_program_name}.cmd.[pid].$timestamp"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Aliases
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+alias v view
+alias rt  "report_timing -nosplit"
+alias rtm "report_timing -nosplit -delay min"
+alias rc  "report_constraint -all_violators -nosplit"
+alias rq report_qor
+alias h history
+alias _ measure_time
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Placement keepout variable settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set_app_var physopt_hard_keepout_distance 5
+set_app_var placer_soft_keepout_channel_width 15
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# ORCA_TOP setup variables
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+set my_mw_lib orca_lib.mw
+set mw_path "../ref/mw_lib"
+set tech_file " ../ref/tech/cb13_6m.tf"
+set tlup_map "../ref/tlup/cb13_6m.map"
+set tlup_max "../ref/tlup/cb13_6m_max.tluplus"
+set tlup_min "../ref/tlup/cb13_6m_min.tluplus"
+set top_design   "ORCA_TOP"
+set ddc_file     "../ref/design_data/ORCA_TOP.ddc"
+set verilog_file "../ref/design_data/ORCA_TOP.v"
+set sdc_file     "../ref/design_data/ORCA_TOP.sdc"
+set def_file     "../ref/design_data/ORCA_TOP.def"
+set scandef_file "../ref/design_data/ORCA_TOP.scandef"
+set ctrl_file    "./scripts/opt_ctrl.tcl"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Logic Library settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+lappend search_path ../ref/db ../ref/tlup
+set_app_var target_library "sc_max.db"
+set_app_var link_library "*"
+set mw_ref_libs ""
+foreach lib {sc io ram8x64 ram16x128} {
+        lappend link_library ${lib}_max.db
+        lappend mw_ref_libs $mw_path/$lib
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Logic 0/1 settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#set mw_logic0_net VSS
+#set mw_logic1_net VDD

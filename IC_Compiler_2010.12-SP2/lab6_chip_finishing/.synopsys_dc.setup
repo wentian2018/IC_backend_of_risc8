@@ -1,0 +1,45 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# IC Compiler Setup File
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Load common settings
+source ../ref/icc_settings.tcl
+
+#echo
+#echo "setting auto_restore_mw_cel_lib_setup true"
+#set auto_restore_mw_cel_lib_setup true
+
+suppress_message {TIM-052 OPT-170 PSYN-025 UID-401}
+suppress_message {PSYN-850 PSYN-087 PSYN-040 PSYN-088}
+suppress_message {RCEX-018 ZRT-026 ZRT-311 ZRT-044 APL-067 TIM-112 MWLIBP-311}
+
+set_app_var physopt_enable_via_res_support true
+set_app_var physopt_hard_keepout_distance 10
+set_app_var enable_recovery_removal_arcs true
+
+############################################################
+# Design configuration
+set my_mw_lib orca_lib.mw
+set mw_path "../ref/mw_lib"
+set tech_file " ../ref/tech/cb13_6m.tf"
+set tlup_map "../ref/tlup/cb13_6m.map"
+set tlup_max "../ref/tlup/cb13_6m_max.tluplus"
+set tlup_min "../ref/tlup/cb13_6m_min.tluplus"
+set top_design   "ORCA_TOP"
+
+set ctrl_file    "./scripts/opt_ctrl.tcl"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#  Library Setup
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+lappend search_path "../ref/db"
+set_app_var target_library "sc_max.db"
+set_app_var link_library "*"
+set mw_ref_libs ""
+foreach lib {sc io ram8x64 ram16x128} {
+	lappend link_library ${lib}_max.db
+	lappend mw_ref_libs $mw_path/$lib
+	set_min_library $lib\_max.db -min_version $lib\_min.db
+}
+
+echo "\nI am ready...\n\n\n"

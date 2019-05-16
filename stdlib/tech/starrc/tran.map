@@ -1,0 +1,118 @@
+
+conducting_layers
+  npoly                npoly               
+  ngate_core           npoly               
+  ngate_core_egl4      npoly               
+  ngate_core_egl1      npoly               
+  ngate_core_sab_egl4  npoly               
+  ngate_IO1            npoly               
+  ntgate_core          npoly               
+  ntgate_IO1           npoly               
+  ngate_core_hvt       npoly               
+  ngate_core_lvt       npoly               
+  dnwngate12           npoly               
+  dnwngate18           npoly               
+  dnwhvtgate12         npoly               
+  dnwlvtgate12         npoly               
+  ngate_IO2            npoly               
+  ngate_IO2_egl4       npoly               
+  ngate_IO2_egl1       npoly               
+  ngate_IO2_sab_egl4   npoly               
+  ntgate_IO2           npoly               
+  ntgate_IO2_under     npoly               
+  ntgate_IO2_over      npoly               
+  ngate_IO2_over       npoly               
+  ngate_IO2_egl4_over  npoly               
+  ngate_IO2_egl1_over  npoly               
+  ngate_IO2_sab_egl4_over npoly               
+  ngate_IO2_under      npoly               
+  dnwngate25           npoly               
+  dnwodgate33          npoly               
+  dnwudgate18          npoly               
+  ngate_core_ull       npoly               
+  dnwullngate          npoly               
+  cngate_core          npoly                RPSQ=0
+  cngate_IO1           npoly                RPSQ=0
+  cngate_IO2           npoly                RPSQ=0
+  RES_RNPO             npoly                RPSQ=0
+  RES_RNPOSAB          npoly                RPSQ=0
+  RES_RHRPO            npoly                RPSQ=0
+  ppoly                ppoly               
+  pgate_core           ppoly               
+  pgate_core_egl4      ppoly               
+  pgate_core_egl1      ppoly               
+  pgate_core_sab_egl4  ppoly               
+  pgate_IO1            ppoly               
+  pgate_core_hvt       ppoly               
+  pgate_core_lvt       ppoly               
+  pgate_IO2            ppoly               
+  pgate_IO2_egl4       ppoly               
+  pgate_IO2_egl1       ppoly               
+  pgate_IO2_sab_egl4   ppoly               
+  pgate_IO2_over       ppoly               
+  pgate_IO2_egl4_over  ppoly               
+  pgate_IO2_egl1_over  ppoly               
+  pgate_IO2_sab_egl4_over ppoly               
+  pgate_IO2_under      ppoly               
+  pgate_core_ull       ppoly               
+  RES_RPPO             ppoly                RPSQ=0
+  RES_RPPOSAB          ppoly                RPSQ=0
+  dio_np               diff                 RPSQ=0
+  dio_pn               diff                 RPSQ=0
+  nsd                  diff                 RPSQ=0
+  psd                  diff                 RPSQ=0
+  ntd                  diff                 RPSQ=0
+  ptd                  diff                 RPSQ=0
+  RES_RNDIF            diff                 RPSQ=0
+  RES_RPDIF            diff                 RPSQ=0
+  RES_RNDIFSAB         diff                 RPSQ=0
+  RES_RPDIFSAB         diff                 RPSQ=0
+  RES_RNWAA            diff                 RPSQ=0
+  mom_nw               SUBSTRATE            precedence=2
+  mom_pw               SUBSTRATE            precedence=1
+  nwell                SUBSTRATE            precedence=2
+  pwell                SUBSTRATE            precedence=1
+  rwell                SUBSTRATE            precedence=1
+  dnwd_psub            SUBSTRATE            precedence=1
+  dnwell               SUBSTRATE            precedence=3
+  pnpcoll              SUBSTRATE            precedence=1
+  bulk_all             SUBSTRATE            precedence=3
+  RES_RNWSTI           SUBSTRATE            precedence=1
+  metal1               M1                  
+  metal2               M2                  
+  metal3               M3                  
+  metal4               M4                  
+  metal5               M5                  
+  metal6               M6                  
+  metal7               M7                  
+  metal8               M8                  
+  metal9               TM2                 
+  ALPA                 RDL                 
+
+via_layers
+  ndfcont              dfCont              
+  pdfcont              dfCont              
+  npolycont            npolyCont           
+  ppolycont            ppolyCont           
+  ntd_mom_nw_subcont   subCont             
+  ptd_mom_pw_subcont   subCont             
+  ntd_nwell_subcont    subCont             
+  ptd_pwell_subcont    subCont             
+  ptd_rwell_subcont    subCont             
+  ptd_dnwd_psub_subcont subCont             
+  ntd_dnwell_subcont   subCont             
+  ptd_pnpcoll_subcont  subCont             
+  V1                   V1                  
+  V2                   V2                  
+  V3                   V3                  
+  V4                   V4                  
+  V5                   V5                  
+  V6                   V6                  
+  V7                   V7                  
+  TV2                  TV2                 
+  RDV                  RDV                 
+
+marker_layers
+
+remove_layers
+

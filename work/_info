@@ -1,0 +1,70 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/zhouwt/risc8
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vexp
+Z1 I9]LejieB1h0><zL^e7nk?1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 d/home/zhouwt/risc8
+Z4 w1557212560
+Z5 8/home/zhouwt/risc8/sim/hdl/verilog/exp.v
+Z6 F/home/zhouwt/risc8/sim/hdl/verilog/exp.v
+L0 57
+Z7 OL;L;10.2c;57
+r1
+31
+Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z9 !s110 1557218202
+Z10 !s100 z1@7ILAzCU9Mgc;>Pd_9P0
+Z11 !s108 1557218202.752686
+Z12 !s107 /home/zhouwt/risc8/sim/hdl/verilog/exp.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|/home/zhouwt/risc8/sim/hdl/verilog/exp.v|
+!i10b 1
+!s85 0
+!i111 0
+vpram
+Z14 IQdk<HhiY[PKQ]ZHaYFmX80
+R2
+R3
+R4
+Z15 8/home/zhouwt/risc8/sim/hdl/verilog/pram.v
+Z16 F/home/zhouwt/risc8/sim/hdl/verilog/pram.v
+L0 6
+R7
+r1
+31
+R8
+Z17 !s110 1557218203
+!i10b 1
+Z18 !s100 4XEDX[18e11:MAJXWVEAE1
+!s85 0
+Z19 !s108 1557218203.023820
+Z20 !s107 /home/zhouwt/risc8/sim/hdl/verilog/pram.v|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|/home/zhouwt/risc8/sim/hdl/verilog/pram.v|
+!i111 0
+vtest
+R17
+!i10b 1
+!s100 zD`COW9EXRm_;]2@hkgQU1
+I8?8ozlJ_n0b::^^]Yo1Qe1
+R2
+R3
+R4
+8/home/zhouwt/risc8/sim/hdl/verilog/test.v
+F/home/zhouwt/risc8/sim/hdl/verilog/test.v
+L0 21
+R7
+r1
+!s85 0
+31
+!s108 1557218203.097151
+!s107 /home/zhouwt/risc8/sim/hdl/verilog/test.v|
+!s90 -reportprogress|300|-work|work|-vopt|/home/zhouwt/risc8/sim/hdl/verilog/test.v|
+!i111 0
+R8

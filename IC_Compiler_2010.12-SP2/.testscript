@@ -1,0 +1,125 @@
+#!/bin/sh
+#
+###############################################################
+#
+#
+# If you wish to run the GUI test,
+# toggle the following variable to a "1":
+# 
+test_gui=0
+#
+#
+###############################################################
+
+###############################################################
+#
+# NO CHANGES REQUIRED BELOW THIS LINE
+#
+#
+########################################################################
+#
+#
+echo " "
+echo " ******************************************************"
+echo " Running the Synopsys Workshop Installation Test Script"
+echo " "
+echo "       Course Name:    IC Compiler 1"
+echo "       Course Version: 2010.12-SP2"
+echo "       Last Update:    2011-08-03"
+echo " ******************************************************"
+echo ""
+
+/bin/rm -rf .Test
+mkdir .Test
+results=".Test/results"
+echo IC Compiler 1 Installation Test > $results
+echo >> $results
+
+LANG=C
+LC_ALL=C
+export LANG LC_ALL
+
+echo " Running  Test 1 - installation integrity check"
+sum=`find lab* ref -follow | sort | cksum | awk '{print $1$2}'`
+if [ "$sum" = "42408783789833" ]
+then
+    echo "Test 1a PASSED:   All files are installed "  >> $results
+else
+    echo "Test 1a FAILED:   There are files missing in the installation " | tee -a $results
+    echo "" | tee -a $results
+fi
+sum=`cat lab*/scripts/* lab*/design_data/* ref/db/* ref/tech/* ref/tlup/* ref/design_data/* | cksum | awk '{print $1$2}'`
+if [ "$sum" = "295776385530007333" ]
+then
+    echo "Test 1b PASSED:   Files are consistent"  >> $results
+else
+    echo "Test 1b FAILED:   File consistency problems found" | tee -a $results
+    echo "" | tee -a $results
+fi
+
+cd .Test
+results="./results"
+tmpout=/tmp/tmpout$$
+echo "exit" > exit.cmd
+
+echo " Running  Test 2 - testing executables"
+type icc_shell 1>$tmpout 2>&1
+if [ "`awk '/not found/ {print "NOTHING"}' $tmpout`" = "NOTHING" ]
+then
+    echo "Test 2a FAILED:   Cannot locate icc_shell executable in current search path" | tee -a $results
+else
+    location=`cat $tmpout`
+	# Now execute the tool, and check the version
+	echo "     2a  running icc_shell ..."
+	icc_shell -x exit  1>icc.log 2>&1
+	ver=`cat icc.log | awk '/E-2010.12-ICC-SP2 / { print }'`
+	if [ "$ver" = "" ]
+    then
+        echo "Test 2a FAILED:   wrong version: icc_shell" | tee -a $results
+		echo "  Version NEEDED: 2010.12-SP2  (E-2010.12-ICC-SP2)" >> $results
+    elif [ "`awk '/No such file/ {print "NOTHING"}' icc.log`" = "NOTHING" ]
+    then
+        echo "Test 2a FAILED:   Cannot locate icc_shell" | tee -a $results
+	else
+        echo "Test 2a PASSED:   $location" >> $results
+    fi
+fi
+
+if [ "$test_gui" = "1" ]
+then
+    echo " Running  Test 3 - testing GUIs"
+else
+    echo " Skipping Test 3 - GUI"
+fi
+# GUI tests here
+if [ "$test_gui" = "1" ]
+then
+    echo "     3a  running icc_shell in GUI mode..."
+	echo "        -> Please use the GUI to exit the tool"
+	echo "           The test is successful if you see the GUI!"
+    icc_shell -gui 
+fi
+
+/bin/rm -f 
+# results reporting - if grep finds 'FAIL' it returns with 0, else 1
+grep FAIL $results >& /dev/null
+if [ "$?" = "0" ]
+then
+  echo "" >> $results
+  echo "  *******************************************************" >> $results
+  echo "  * Recommended Suggestions for Corrections of FAILURES *" >> $results
+  echo "  *******************************************************" >> $results
+  echo "" >> $results
+  echo "  1. Be sure the class materials installed correctly.    " >> $results
+  echo "" >> $results
+  echo "  2. Be sure the required executables are in your path." >> $results
+  echo "" >> $results
+  echo "     Have a look at the tool log files in .Test/" >> $results
+  echo ""
+  echo " Installation Test FAILS for IC Compiler 1 workshop" | tee -a $results
+  echo " For details execute: cat .Test/results"
+else
+  echo ""
+  echo " Installation Test PASSED for IC Compiler 1 workshop" | tee -a $results
+  echo ""
+fi

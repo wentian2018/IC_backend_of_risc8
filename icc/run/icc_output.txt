@@ -1,0 +1,21 @@
+
+### Executing common setup file 'ref/icc_settings.tcl' ...
+### Processing procs.tcl...
+The following procedures are defined for use in this workshop.
+They are NOT standard IC Compiler commands.
+CES_procs: 
+ aa                   # always ask - Searches Synopsys help for both commands and variables
+ async_domain         # set false paths between 2 clocks in both directions
+ gen_reports          # Generates min/max timing, constraint and qor reports
+ gui                  # Start or stop the GUI
+ host_stats           # Display statistics of the current host (server)
+ measure_time         # Run a command while measuring the time it takes
+ report_placement_blockages # Display a summary of all placement blockages in the design
+ report_route_guides  # Display a summary of all route guides in the design
+ report_timer         # report the elapsed time of a named timer
+ reset_timer          # Resets a named timer
+ ring_it              # Creates a simple power ring around macros
+ view                 # Display output of any command in a separate Tk window.
+ vman                 # Display a man page using the GUI man reader or Tcl/TK.
+
+

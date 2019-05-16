@@ -1,0 +1,10 @@
+/* Edif file name is "CADENCE_EDIF" */
+
+/* EDIF version: 2 0 0 */
+
+library("cgd_t025_io") {
+  SCALE = 1.0 / 1.0;
+  ROUTE_GRID = 1024;
+  set_route_grid(ROUTE_GRID);
+  set_meter_scale(0.0254 / (160 * SCALE * ROUTE_GRID));
+} /* end of library "cgd_t025_io" */

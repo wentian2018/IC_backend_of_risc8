@@ -1,0 +1,74 @@
+#@ # 
+#@ # Running fm_shell Version K-2015.06-SP1 for linux64 -- Jul 14, 2015
+#@ # Date:   Thu May  9 09:59:06 2019
+#@ # Run by: zhouwt@helium3
+#@ 
+
+source /opt/synopsys/fm201506/admin/setup/.synopsys_fm.setup
+#@ # -- Starting source /opt/synopsys/fm201506/admin/setup/.synopsys_fm.setup
+
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /opt/synopsys/fm201506/admin/setup/.synopsys_fm.setup
+
+source -echo -verbose fm.tcl
+#@ # -- Starting source fm.tcl
+
+#@ set search_path "$search_path ../rtl"
+#@ 
+#@ set synopsys_auto_setup true
+#@ 
+#@ set_svf ../dc/outputs/risc8.svf
+#@ set hdlin_dwroot /opt/synopsys/syn201506 
+#@ ########read RTL ###########
+#@ read_verilog -r -vcs "-f ../rtl/syn.vf"
+#@ set_top cpu
+#@ read_db -i ../ref/db/GF21LB004-FB-00000-r5p0-03rel0/arm/cp/cmos28lp/sc9_base_hvt/r5p0/db/sc9_cmos28lp_base_hvt_ff_nominal_min_1p10v_m40c.db
+#@ 
+#@ ########read implementation model########
+#@ read_verilog -i ../dc/run/netlist/risc8.v
+#@ set_top cpu
+#@ verify
+#@ 
+#@ 
+#@ if { [info exists ::env(STARTGUI)] } {
+#@ 	start_gui
+#@ } else {
+#@ 	quit
+#@ }

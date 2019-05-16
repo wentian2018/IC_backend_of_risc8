@@ -1,0 +1,38 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# IC Compiler Setup File
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+# Load common settings
+source ../ref/icc_settings.tcl
+
+echo
+
+# suppress/limit excess info/warning messages:
+suppress_message {TIM-052 OPT-170 PSYN-025 UID-401}
+suppress_message {PSYN-850 PSYN-087 PSYN-040 PSYN-088}
+suppress_message {ZRT-026 ZRT-424 RCEX-018 RCEX-039 PWR-414 PWR-415 PWR-428 RCEX-060}
+set_message_info -limit 10 -id TIM-112
+set_message_info -limit 10 -id RCEX-011
+
+set_app_var physopt_enable_via_res_support true
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#  Library Setup
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+lappend search_path ../ref/db
+set_app_var target_library "sc_max.db"
+set_app_var link_library "*"
+set mw_ref_libs ""
+foreach lib {sc io ram8x64 ram16x128} {
+	lappend link_library ${lib}_max.db
+	lappend mw_ref_libs ../ref/mw_lib/$lib
+	set_min_library $lib\_max.db -min_version $lib\_min.db
+}
+
+# Loading RM setup
+
+source scripts/icc_setup.tcl
+
+
+echo "\nI am ready...\n\n\n"

@@ -1,0 +1,19 @@
+set_app_var search_path "$search_path ../../rtl \ 
+                                      ../../ref1/db  \
+                                      ../scripts"
+set_app_var target_library "io_max.db  ram16x128_max.db  ram32x64_max.db  ram4x32_max.db  ram8x64_max.db  sc_max.db  sc_pg_max.db  special_max.db \
+                        io_min.db  ram16x128_min.db  ram32x64_min.db  ram4x32_min.db  ram8x64_min.db  sc_min.db  sc_pg_min.db  special_min.db"
+set_app_var link_library "* $target_library dw_foundation.sldb"
+
+set synthetic_library "dw_foundation.sldb"
+
+
+set hdlin_translate_off_skip_text "TRUE"
+set edifout_netlist_only "TRUE"
+set verilogout_no_tri true
+set plot_command {lpr -Plp}
+
+set sh_enable_line_editing true
+set sh_line_editing_mode emacs
+history keep 100
+alias h history

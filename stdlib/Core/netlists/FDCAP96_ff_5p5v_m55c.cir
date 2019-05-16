@@ -1,0 +1,67 @@
+* File: rcx_out.net
+* Created: Tue Mar 26 09:50:14 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* 
+* 
+* .include "rcx_out.net.pex"
+* BEGIN of "./rcx_out.net.pex"
+* File: rcx_out.net.pex
+* Created: Tue Mar 26 09:50:14 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* Nominal Temperature: 27C
+* Circuit Temperature: 27C
+* 
+
+* END of "./rcx_out.net.pex"
+* 
+.subckt FDCAP96  VDD VSS
+* 
+XM11/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM10/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM9/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM8/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM6/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM3/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM4/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM1/X1 net04 net03 VSS VSS nch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.45e-12 PS=2.01e-05 AD=9.7178e-12 PD=1.94366e-05
+XM15/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM14/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM13/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM12/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM7/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM2/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM5/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+XM0/X1 net03 net04 VDD VDD pch_5_mac_egl1 A=9e-06 B=5.8e-06 PAOFF=2.1e-07
++ SA=1.04459e-06 SB=2.1e-07 AS=9.7178e-12 PS=1.94366e-05 AD=9.45e-12 PD=2.01e-05
+*
+* 
+* .include "rcx_out.net.FDCAP96.pxi"
+* BEGIN of "./rcx_out.net.FDCAP96.pxi"
+* File: rcx_out.net.FDCAP96.pxi
+* Created: Tue Mar 26 09:50:14 2019
+* 
+
+* END of "./rcx_out.net.FDCAP96.pxi"
+* 
+*
+.ends
+*
+*
+

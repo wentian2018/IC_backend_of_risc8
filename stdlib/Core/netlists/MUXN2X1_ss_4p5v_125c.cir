@@ -1,0 +1,65 @@
+* File: rcx_out.net
+* Created: Tue Mar 26 09:43:50 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* 
+* 
+* .include "rcx_out.net.pex"
+* BEGIN of "./rcx_out.net.pex"
+* File: rcx_out.net.pex
+* Created: Tue Mar 26 09:43:50 2019
+* Program "Calibre xRC"
+* Version "v2013.2_35.25"
+* Nominal Temperature: 27C
+* Circuit Temperature: 27C
+* 
+
+* END of "./rcx_out.net.pex"
+* 
+.subckt MUXN2X1  A B S0 VDD VSS Y
+* 
+XM9/X1 net18 A VDD VDD pch_5_mac_egl4 A=4.8e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=2.49941e-07 HAB=6.59956e-07 AS=3.532e-12 PS=1.08457e-05
++ AD=1.08121e-11 PD=3.35088e-05
+XM7/X1 net17 B VDD VDD pch_5_mac_egl4 A=4.8e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=2.49941e-07 HAB=6.59956e-07 AS=3.532e-12 PS=1.08457e-05
++ AD=1.08121e-11 PD=3.35088e-05
+XM5/X1 net17 net28 Y VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM3/X1 net18 S0 Y VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM0/X1 net28 S0 VDD VDD pch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM8/X1 net18 A VSS VSS nch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM6/X1 net17 B VSS VSS nch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM4/X1 net17 S0 Y VSS nch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM2/X1 net18 net28 Y VSS nch_5_mac_egl4 A=2.1e-06 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=1.534e-12 PS=5.44569e-06
++ AD=6.8801e-12 PD=2.23088e-05
+XM1/X1 net28 S0 VSS VSS nch_5_mac_egl4 A=7.4e-07 B=7.4e-07 D=1e-07 H=5e-07 NF=1
++ POLYCNN=5e-07 HAT=1.49941e-07 HAB=6.59956e-07 AS=5.276e-13 PS=2.72569e-06
++ AD=5.0305e-12 PD=1.68688e-05
+*
+* 
+* .include "rcx_out.net.MUXN2X1.pxi"
+* BEGIN of "./rcx_out.net.MUXN2X1.pxi"
+* File: rcx_out.net.MUXN2X1.pxi
+* Created: Tue Mar 26 09:43:50 2019
+* 
+
+* END of "./rcx_out.net.MUXN2X1.pxi"
+* 
+*
+.ends
+*
+*
+
